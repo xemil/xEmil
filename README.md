@@ -18,6 +18,6 @@ Do you want to join a small indie project in Xamarin? Working with Lund Universi
 We are looking for persons interested in Developing but also people with interest of interaction design and the future of mobile systems including project such as AR and VR, Google Cardbord, Occulus, Leap Motion etc.
 
 ##LINKS
-[GitHub](https://github.com/eapelgren/xEmil)
-[Wiki](https://github.com/eapelgren/xEmil/wiki)
-[HomePage - Under Construction](http://xemil.se)
+*"[GitHub](https://github.com/eapelgren/xEmil)"
+*"[Wiki](https://github.com/eapelgren/xEmil/wiki)"
+*"[HomePage - Under Construction](http://xemil.se)"
