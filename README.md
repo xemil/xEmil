@@ -2,6 +2,12 @@
 
 ###Welcome to Lunds number 1 most geeky community!
 
+## Reqruting
+
+* Reqruting junior Xamarin developers for opensource project.
+* DevOps Integration Visual Studio Project will start 
+
+
 ##About
 Are you a person with interest of cross platform development? Creating IOs iOS 8.1.3, Android 5.0.2 Material Design apps using the Xamarin platform? Maybe go an interest of Xamarin Forms MVVM
 
@@ -9,7 +15,6 @@ Are you a person with interest of cross platform development? Creating IOs iOS 8
 Do you want to join a small indie project in Xamarin? Working with Lund University? Ladok3? No pressure its all opensource and you can join the community. 
 
 ##Workshop
-
 
 * Date: still not desigded
 * Location: Faculty of Engineering LTH at Lund University – Interaction Lab.
