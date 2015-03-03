@@ -3,14 +3,13 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
-
 using Xamarin.Forms;
 using xEmilForms.Pages;
 using xEmilForms.ViewModel;
 using XLabs.Forms.Mvvm;
 using XLabs.Ioc;
-using XLabs.Platform.Mvvm;
 using XLabs.Forms.Controls;
+using XLabs.Platform.Mvvm;
 
 namespace xEmilForms
 {
@@ -43,7 +42,6 @@ namespace xEmilForms
         {
 
             ViewFactory.Register<RedditPostPage, RedditPostViewModel>();
-            var x = new RedditScrollView();
             return new RedditPostPage();
             
 

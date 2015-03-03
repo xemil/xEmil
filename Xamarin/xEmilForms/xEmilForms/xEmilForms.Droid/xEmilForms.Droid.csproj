@@ -23,6 +23,8 @@
     <JavaMaximumHeapSize />
     <JavaOptions />
     <NuGetPackageImportStamp>3b5fa214</NuGetPackageImportStamp>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -50,6 +52,7 @@
       <HintPath>..\..\packages\Xamarin.Forms.1.3.1.6296\lib\MonoAndroid10\FormsViewGroup.dll</HintPath>
     </Reference>
     <Reference Include="Mono.Android" />
+    <Reference Include="Mono.Android.Export" />
     <Reference Include="mscorlib" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -70,6 +73,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
+    <Compile Include="Render\RedditCellRenderer.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -77,6 +81,10 @@
     <None Include="packages.config" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
+    <AndroidResource Include="Resources\layout\testNativeCell.axml" />
+    <AndroidResource Include="Resources\drawable\main_header_selector.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\icon.png" />
@@ -88,6 +96,46 @@
     <Content Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Xamarin-Forms-Labs\src\Caching\XLabs.Caching.SQLite\XLabs.Caching.SQLite.csproj">
+      <Project>{edc5424b-fbbb-47c3-95ba-8fc14743aedd}</Project>
+      <Name>XLabs.Caching.SQLite</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Xamarin-Forms-Labs\src\Caching\XLabs.Caching\XLabs.Caching.csproj">
+      <Project>{8dea9048-3715-4f76-9c7c-390a4256d833}</Project>
+      <Name>XLabs.Caching</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Xamarin-Forms-Labs\src\Forms\Charting\XLabs.Forms.Charting.Droid\XLabs.Forms.Charting.Droid.csproj">
+      <Project>{c5696998-e9c1-4a24-b50c-ffcfa836b890}</Project>
+      <Name>XLabs.Forms.Charting.Droid</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Xamarin-Forms-Labs\src\Forms\XLabs.Forms.Droid\XLabs.Forms.Droid.csproj">
+      <Project>{e11e6ab0-2d1d-4b50-a835-7c6b342797ef}</Project>
+      <Name>XLabs.Forms.Droid</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Xamarin-Forms-Labs\src\Forms\XLabs.Forms\XLabs.Forms.csproj">
+      <Project>{DC0BDD11-9352-44E4-BCEB-8AE56794BB41}</Project>
+      <Name>XLabs.Forms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Xamarin-Forms-Labs\src\IOC\XLabs.Ioc\XLabs.Ioc.csproj">
+      <Project>{2e200799-1170-49bf-a4aa-2a9228f8a213}</Project>
+      <Name>XLabs.Ioc</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Xamarin-Forms-Labs\src\Platform\XLabs.Platform.Droid\XLabs.Platform.Droid.csproj">
+      <Project>{f422fd34-e431-4758-a981-03552a7bcf13}</Project>
+      <Name>XLabs.Platform.Droid</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Xamarin-Forms-Labs\src\Platform\XLabs.Platform\XLabs.Platform.csproj">
+      <Project>{2a4d9dd4-326c-4824-aa3c-a9ed45cc898c}</Project>
+      <Name>XLabs.Platform</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Xamarin-Forms-Labs\src\Serialization\XLabs.Serialization\XLabs.Serialization.csproj">
+      <Project>{8e7f7522-f018-466a-aa8a-147ee9341ba0}</Project>
+      <Name>XLabs.Serialization</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Xamarin-Forms-Labs\src\XLabs.Core\XLabs.Core.csproj">
+      <Project>{15D9C404-F7E2-49F0-ACC9-63C4C008C860}</Project>
+      <Name>XLabs.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\xEmilForms\xEmilForms.csproj">
       <Name>xEmilForms</Name>
     </ProjectReference>
@@ -99,7 +147,9 @@
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('..\..\packages\Xamarin.Forms.1.3.1.6296\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xamarin.Forms.1.3.1.6296\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets'))" />
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
   </Target>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
      Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
