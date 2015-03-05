@@ -1,6 +1,11 @@
-﻿using Xamarin.Forms;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Xamarin.Forms;
 
-namespace xEmilForms.Cell
+namespace xEmilForms.Renderer
 {
     public class RedditCell : ViewCell
     {
