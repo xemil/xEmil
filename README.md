@@ -1,20 +1,35 @@
 
 
-###Welcome to Lunds number 1 most geeky community!
+###Welcome to the xEmil Repository
 
 ##About
-Are you a person with interest of cross platform development? Creating IOs iOS 8.1.3, Android 5.0.2 Material Design apps using the Xamarin platform? Maybe go an interest of Xamarin Forms MVVM
+This project is a Xamarin Forms project creating a native crossplatorm.
 
-##Contribute
-Do you want to join a small indie project in Xamarin? Working with Lund University? Ladok3? No pressure its all opensource and you can join the community. 
+The integration and backend system is based on Azure Mobile Services and Virtual Machines running on the Azure Cloud.
+
+The app has a REST interface towards REDDIT indexing user posts and data.
 
 ##Workshop
+ 
 
-* Date: still not desigded
-* Location: Faculty of Engineering LTH at Lund University – Interaction Lab.
-* Topics: Introduction for a person who want to attend a worksop series in a totally new project in Xamarin using Visual Studio from scratch. No experience required. Press join group button for futher information.
+Date: 26/3 17:00
 
-We are looking for persons interested in Developing but also people with interest of interaction design and the future of mobile systems including project such as AR and VR, Google Cardbord, Occulus, Leap Motion etc.
+Location: Faculty of Engineering LTH at Lund University – Virtualreality Lab. 
+
+Topics: 
+
+- Introduction in the Xamarin platform. Covering 
+Xamarin Forms, MVVM models and more. 
+
+- Open discussion about Xamarin and crossplatform development. Focus on what to expect from the platform and are there any downfalls? Is there any advice to developers just starting with Xamarin?
+
+- Workshop creating an Android/iOS crossplatform startup project in Xamarin. No experience required, project will start from scratch.
+
+Join group for further information.
+
+[Xamarin Skåne Meetup Group](http://www.meetup.com/xamarinskane/)
+
+For more information about Xamarin visit http://xamarin.com
 
 ##LINKS
 [GitHub](https://github.com/eapelgren/xEmil)
