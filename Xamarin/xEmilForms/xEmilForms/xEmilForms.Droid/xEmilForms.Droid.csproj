@@ -94,6 +94,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Properties\AndroidManifest.xml" />
+    <AndroidResource Include="Resources\drawable\facebookButton900x150.png" />
+    <AndroidResource Include="Resources\drawable\meetup900x150.png" />
+    <AndroidResource Include="Resources\drawable\tretton900x150.png" />
+    <AndroidResource Include="Resources\drawable\xamarin807x716.png" />
+    <AndroidResource Include="Resources\drawable\xEmilButton900x150.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Xamarin-Forms-Labs\src\Caching\XLabs.Caching.SQLite\XLabs.Caching.SQLite.csproj">
@@ -137,6 +142,7 @@
       <Name>XLabs.Core</Name>
     </ProjectReference>
     <ProjectReference Include="..\xEmilForms\xEmilForms.csproj">
+      <Project>{7bc0bc68-7bb0-44c6-9f14-2d71481a44bf}</Project>
       <Name>xEmilForms</Name>
     </ProjectReference>
   </ItemGroup>

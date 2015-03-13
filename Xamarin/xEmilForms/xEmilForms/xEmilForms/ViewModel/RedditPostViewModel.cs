@@ -42,6 +42,7 @@ namespace xEmilForms.ViewModel
             LoadRedditPosts();
         }
 
+
         public Command LoadRedditPostsCommand { get; set; }
 
         private void LoadRedditPosts()

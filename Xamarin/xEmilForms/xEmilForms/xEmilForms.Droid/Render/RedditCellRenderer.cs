@@ -4,9 +4,9 @@ using Android.Content;
 using Android.Views;
 using Android.Widget;
 using Xamarin.Forms;
+using xEmilForms.Cell;
 using XLabs.Forms.Mvvm;
 using Xamarin.Forms.Platform.Android;
-using xEmilForms.Cell;
 using xEmilForms.Droid.Render;
 using xEmilForms.Exception;
 using xEmilForms.ViewModel;
@@ -35,11 +35,11 @@ namespace xEmilForms.Droid.Render
             if (redditVm != null)
             {
                 var redditPost = redditVm.RedditPosts.FirstOrDefault();
-                var template = inflatorservice.Inflate(Resource.Layout.redditCell, null);
-               // template.FindViewById<ImageView>(Resource.Id.imageView1).SetImageURI(redditPost.ImageUri.ToAndroidUri());
-                template.FindViewById<TextView>(Resource.Id.textView1).Text = redditPost.Header;
-                template.FindViewById<TextView>(Resource.Id.textView2).Text = redditPost.Description;
-                return template;
+               // var template = inflatorservice.Inflate(Resource.Layout.redditCell, null);
+               //// template.FindViewById<ImageView>(Resource.Id.imageView1).SetImageURI(redditPost.ImageUri.ToAndroidUri());
+               // template.FindViewById<TextView>(Resource.Id.textView1).Text = redditPost.Header;
+               // template.FindViewById<TextView>(Resource.Id.textView2).Text = redditPost.Description;
+               // return template;
             }
 
 
