@@ -1,0 +1,102 @@
+﻿
+ Please enter the commit message for your changes. Lines starting
+ with '' will be ignored, and an empty message aborts the commit.
+ On branch master
+ Your branch is up-to-date with 'origin/master'.
+
+ Changes to be committed:
+	new file:   Xamarin-Forms-Labs
+	new file:   xEmilForms/Controls/xEmilForms.Controls/Properties/AssemblyInfo.cs
+	new file:   xEmilForms/Controls/xEmilForms.Controls/packages.config
+	new file:   xEmilForms/Controls/xEmilForms.Controls/xEmilForms.Controls.cs
+	new file:   xEmilForms/Controls/xEmilForms.Controls/xEmilForms.Controls.csproj
+	new file:   xEmilForms/Controls/xEmilforms.Controls.RedditScrollView/Properties/AssemblyInfo.cs
+	new file:   xEmilForms/Controls/xEmilforms.Controls.RedditScrollView/RedditScrollView.cs
+	new file:   xEmilForms/Controls/xEmilforms.Controls.RedditScrollView/packages.config
+	new file:   xEmilForms/Controls/xEmilforms.Controls.RedditScrollView/xEmilForms.Controls.csproj
+	new file:   xEmilForms/xEmilForms.sln
+	new file:   xEmilForms/xEmilForms/xEmilForms.Droid/Assets/AboutAssets.txt
+	new file:   xEmilForms/xEmilForms/xEmilForms.Droid/MainActivity.cs
+	new file:   xEmilForms/xEmilForms/xEmilForms.Droid/Properties/AndroidManifest.xml
+	new file:   xEmilForms/xEmilForms/xEmilForms.Droid/Properties/AssemblyInfo.cs
+	new file:   xEmilForms/xEmilForms/xEmilForms.Droid/Renderer/RedditCellRenderer.cs
+	new file:   xEmilForms/xEmilForms/xEmilForms.Droid/Resources/AboutResources.txt
+	new file:   xEmilForms/xEmilForms/xEmilForms.Droid/Resources/Resource.Designer.cs
+	new file:   xEmilForms/xEmilForms/xEmilForms.Droid/Resources/drawable-hdpi/icon.png
+	new file:   xEmilForms/xEmilForms/xEmilForms.Droid/Resources/drawable-xhdpi/icon.png
+	new file:   xEmilForms/xEmilForms/xEmilForms.Droid/Resources/drawable-xxhdpi/icon.png
+	new file:   xEmilForms/xEmilForms/xEmilForms.Droid/Resources/drawable/icon.png
+	new file:   xEmilForms/xEmilForms/xEmilForms.Droid/Resources/layout/redditCell.axml
+	new file:   xEmilForms/xEmilForms/xEmilForms.Droid/packages.config
+	new file:   xEmilForms/xEmilForms/xEmilForms.Droid/xEmilForms.Droid.csproj
+	new file:   xEmilForms/xEmilForms/xEmilForms.WinPhone/App.xaml
+	new file:   xEmilForms/xEmilForms/xEmilForms.WinPhone/App.xaml.cs
+	new file:   xEmilForms/xEmilForms/xEmilForms.WinPhone/Assets/AlignmentGrid.png
+	new file:   xEmilForms/xEmilForms/xEmilForms.WinPhone/Assets/ApplicationIcon.png
+	new file:   xEmilForms/xEmilForms/xEmilForms.WinPhone/Assets/Tiles/FlipCycleTileLarge.png
+	new file:   xEmilForms/xEmilForms/xEmilForms.WinPhone/Assets/Tiles/FlipCycleTileMedium.png
+	new file:   xEmilForms/xEmilForms/xEmilForms.WinPhone/Assets/Tiles/FlipCycleTileSmall.png
+	new file:   xEmilForms/xEmilForms/xEmilForms.WinPhone/Assets/Tiles/IconicTileMediumLarge.png
+	new file:   xEmilForms/xEmilForms/xEmilForms.WinPhone/Assets/Tiles/IconicTileSmall.png
+	new file:   xEmilForms/xEmilForms/xEmilForms.WinPhone/LocalizedStrings.cs
+	new file:   xEmilForms/xEmilForms/xEmilForms.WinPhone/MainPage.xaml
+	new file:   xEmilForms/xEmilForms/xEmilForms.WinPhone/MainPage.xaml.cs
+	new file:   xEmilForms/xEmilForms/xEmilForms.WinPhone/Properties/AppManifest.xml
+	new file:   xEmilForms/xEmilForms/xEmilForms.WinPhone/Properties/AssemblyInfo.cs
+	new file:   xEmilForms/xEmilForms/xEmilForms.WinPhone/Properties/WMAppManifest.xml
+	new file:   xEmilForms/xEmilForms/xEmilForms.WinPhone/README_FIRST.txt
+	new file:   xEmilForms/xEmilForms/xEmilForms.WinPhone/Resources/AppResources.Designer.cs
+	new file:   xEmilForms/xEmilForms/xEmilForms.WinPhone/Resources/AppResources.resx
+	new file:   xEmilForms/xEmilForms/xEmilForms.WinPhone/SplashScreenImage.jpg
+	new file:   xEmilForms/xEmilForms/xEmilForms.WinPhone/Toolkit.Content/ApplicationBar.Add.png
+	new file:   xEmilForms/xEmilForms/xEmilForms.WinPhone/Toolkit.Content/ApplicationBar.Cancel.png
+	new file:   xEmilForms/xEmilForms/xEmilForms.WinPhone/Toolkit.Content/ApplicationBar.Check.png
+	new file:   xEmilForms/xEmilForms/xEmilForms.WinPhone/Toolkit.Content/ApplicationBar.Delete.png
+	new file:   xEmilForms/xEmilForms/xEmilForms.WinPhone/Toolkit.Content/ApplicationBar.Select.png
+	new file:   xEmilForms/xEmilForms/xEmilForms.WinPhone/packages.config
+	new file:   xEmilForms/xEmilForms/xEmilForms.WinPhone/xEmilForms.WinPhone.csproj
+	new file:   xEmilForms/xEmilForms/xEmilForms.iOS/AppDelegate.cs
+	new file:   xEmilForms/xEmilForms/xEmilForms.iOS/Entitlements.plist
+	new file:   xEmilForms/xEmilForms/xEmilForms.iOS/Info.plist
+	new file:   xEmilForms/xEmilForms/xEmilForms.iOS/Main.cs
+	new file:   xEmilForms/xEmilForms/xEmilForms.iOS/Properties/AssemblyInfo.cs
+	new file:   xEmilForms/xEmilForms/xEmilForms.iOS/Resources/Default-568h@2x.png
+	new file:   xEmilForms/xEmilForms/xEmilForms.iOS/Resources/Default-Portrait.png
+	new file:   xEmilForms/xEmilForms/xEmilForms.iOS/Resources/Default-Portrait@2x.png
+	new file:   xEmilForms/xEmilForms/xEmilForms.iOS/Resources/Default.png
+	new file:   xEmilForms/xEmilForms/xEmilForms.iOS/Resources/Default@2x.png
+	new file:   xEmilForms/xEmilForms/xEmilForms.iOS/Resources/Icon-60@2x.png
+	new file:   xEmilForms/xEmilForms/xEmilForms.iOS/Resources/Icon-60@3x.png
+	new file:   xEmilForms/xEmilForms/xEmilForms.iOS/Resources/Icon-76.png
+	new file:   xEmilForms/xEmilForms/xEmilForms.iOS/Resources/Icon-76@2x.png
+	new file:   xEmilForms/xEmilForms/xEmilForms.iOS/Resources/Icon-Small-40.png
+	new file:   xEmilForms/xEmilForms/xEmilForms.iOS/Resources/Icon-Small-40@2x.png
+	new file:   xEmilForms/xEmilForms/xEmilForms.iOS/Resources/Icon-Small-40@3x.png
+	new file:   xEmilForms/xEmilForms/xEmilForms.iOS/Resources/Icon-Small.png
+	new file:   xEmilForms/xEmilForms/xEmilForms.iOS/Resources/Icon-Small@2x.png
+	new file:   xEmilForms/xEmilForms/xEmilForms.iOS/Resources/Icon-Small@3x.png
+	new file:   xEmilForms/xEmilForms/xEmilForms.iOS/Resources/LaunchScreen.storyboard
+	new file:   xEmilForms/xEmilForms/xEmilForms.iOS/iTunesArtwork
+	new file:   xEmilForms/xEmilForms/xEmilForms.iOS/iTunesArtwork@2x
+	new file:   xEmilForms/xEmilForms/xEmilForms.iOS/packages.config
+	new file:   xEmilForms/xEmilForms/xEmilForms.iOS/xEmilForms.iOS.csproj
+	new file:   xEmilForms/xEmilForms/xEmilForms/App.cs
+	new file:   xEmilForms/xEmilForms/xEmilForms/Cell/RedditCell.cs
+	new file:   xEmilForms/xEmilForms/xEmilForms/Cell/RedditCellNew.cs
+	new file:   xEmilForms/xEmilForms/xEmilForms/Controls/InfiniteListView.cs
+	new file:   xEmilForms/xEmilForms/xEmilForms/Model/ComicBookCharacter.cs
+	new file:   xEmilForms/xEmilForms/xEmilForms/Model/RedditPost.cs
+	new file:   xEmilForms/xEmilForms/xEmilForms/Properties/AssemblyInfo.cs
+	new file:   xEmilForms/xEmilForms/xEmilForms/Services/IRedditService.cs
+	new file:   xEmilForms/xEmilForms/xEmilForms/Services/RedditServiceMocked.cs
+	new file:   xEmilForms/xEmilForms/xEmilForms/View/InfiniteListViewSampleView.xaml
+	new file:   xEmilForms/xEmilForms/xEmilForms/View/InfiniteListViewSampleView.xaml.cs
+	new file:   xEmilForms/xEmilForms/xEmilForms/ViewModel/InfiniteListViewSampleViewModel.cs
+	new file:   xEmilForms/xEmilForms/xEmilForms/ViewModel/RedditPostViewModel.cs
+	new file:   xEmilForms/xEmilForms/xEmilForms/packages.config
+	new file:   xEmilForms/xEmilForms/xEmilForms/xEmilForms.csproj
+
+ Changes not staged for commit:
+	modified:   Xamarin-Forms-Labs (modified content)
+
+
