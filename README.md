@@ -37,17 +37,9 @@ Is on the loop for beta, let me know if you would be interested getting accsess.
 
 (https://components.xamarin.com/view/xamarin.auth)https://components.xamarin.com/view/xamarin.auth
 
-#API
-REST
-
-
-##Integration
-
-#OAUTH
-Is on the loop for beta, let me know if you would be interested getting accsess.
 
 #API
-REST
+REST - TODO
 
 
 For more information about Xamarin visit http://xamarin.com
