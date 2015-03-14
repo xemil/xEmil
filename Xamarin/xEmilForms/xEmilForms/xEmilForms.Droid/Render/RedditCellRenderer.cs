@@ -20,35 +20,9 @@ namespace xEmilForms.Droid.Render
     {
         public RedditCellRenderer()
         {
-            
-        }
+ 
 
-     
-        protected override View GetCellCore(Xamarin.Forms.Cell item, View convertView, ViewGroup parent, Context context)
-        {
-            var inflatorservice =
-                (LayoutInflater) Forms.Context.GetSystemService(Android.Content.Context.LayoutInflaterService);
-            var redditCell = (RedditCellNew) item;
-            var view = convertView;
-
-            var redditVm = redditCell.BindingContext as RedditPostViewModel;
-            if (redditVm != null)
-            {
-                var redditPost = redditVm.RedditPosts.FirstOrDefault();
-               // var template = inflatorservice.Inflate(Resource.Layout.redditCell, null);
-               //// template.FindViewById<ImageView>(Resource.Id.imageView1).SetImageURI(redditPost.ImageUri.ToAndroidUri());
-               // template.FindViewById<TextView>(Resource.Id.textView1).Text = redditPost.Header;
-               // template.FindViewById<TextView>(Resource.Id.textView2).Text = redditPost.Description;
-               // return template;
-            }
-
-
-            if (view == null)
-            {
-                throw new NoViewException("ANDROID REDDIT CELL RENDERER NO VIEW");
-            }
-
-            return base.GetCellCore(item, convertView, parent, context);
+       
         }
     }
 }

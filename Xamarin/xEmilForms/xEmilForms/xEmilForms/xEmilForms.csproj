@@ -42,18 +42,13 @@
     <Compile Include="Controls\InfiniteListView.cs" />
     <Compile Include="Exception\NoViewException.cs" />
     <Compile Include="Model\RedditPost.cs" />
-    <Compile Include="Pages\LoginPage.cs" />
     <Compile Include="Pages\LoginPageXML.xaml.cs">
       <DependentUpon>LoginPageXML.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModel\LoginPageVM.cs" />
-    <Compile Include="Pages\RedditPostPage.xaml.cs">
-      <DependentUpon>RedditPostPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\IRedditService.cs" />
     <Compile Include="Services\RedditServiceMocked.cs" />
-    <Compile Include="ViewModel\RedditPostViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">
@@ -65,12 +60,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Pages\RedditPostPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Xamarin-Forms-Labs\src\Forms\XLabs.Forms\XLabs.Forms.csproj">
@@ -93,7 +82,7 @@
   <ItemGroup>
     <EmbeddedResource Include="Pages\LoginPageXML.xaml">
       <SubType>Designer</SubType>
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />

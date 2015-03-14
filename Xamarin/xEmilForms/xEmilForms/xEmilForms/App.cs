@@ -41,13 +41,13 @@ namespace xEmilForms
         private Page GetMainPage()
         {
             RegisterAllVm();  
-            return new LoginPageExtraXML();
+            return new LoginPageXML();
          }
 
         private void RegisterAllVm()
         {
-            ViewFactory.Register<RedditPostPage, RedditPostViewModel>();
-            ViewFactory.Register<LoginPageExtraXML, LoadPageViewModel>();
+            //ViewFactory.Register<RedditPostPage, RedditPostViewModel>();
+            ViewFactory.Register<LoginPageXML, LoadPageViewModel>();
         }
 
         protected override void OnStart()
