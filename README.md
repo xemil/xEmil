@@ -2,6 +2,9 @@
 
 ###Welcome to the xEmil Repository
 
+
+
+
 ##About
 This project is a Xamarin Forms project creating a native crossplatorm.
 
@@ -27,7 +30,25 @@ Xamarin Forms, MVVM models and more.
 
 Join group for further information.
 
-[Xamarin Skåne Meetup Group](http://www.meetup.com/xamarinskane/)
+[Xamarin Skåne Meetup Group](http://www.meetup.com/xamarinskane/)##Integration
+
+#OAUTH
+Is on the loop for beta, let me know if you would be interested getting accsess.
+
+(https://components.xamarin.com/view/xamarin.auth)https://components.xamarin.com/view/xamarin.auth
+
+#API
+REST
+
+
+##Integration
+
+#OAUTH
+Is on the loop for beta, let me know if you would be interested getting accsess.
+
+#API
+REST
+
 
 For more information about Xamarin visit http://xamarin.com
 
