@@ -1,4 +1,6 @@
 ﻿using System.Collections.ObjectModel;
+using System.Resources;
+using Xamarin.Forms;
 using xEmilForms.Model;
 using xEmilForms.Services;
 using XLabs.Forms.Controls;
@@ -7,13 +9,13 @@ using XLabs.Ioc;
 
 namespace xEmilForms.ViewModel
 {
-    [ViewType(typeof (LoadPageViewModel))]
-    public class LoadPageViewModel : XLabs.Forms.Mvvm.ViewModel
+    [ViewType(typeof (ButtonPageViewModel))]
+    public class ButtonPageViewModel : XLabs.Forms.Mvvm.ViewModel
     {
         private ImageButton _facebookImageButton;
-
         private ObservableCollection<RedditPost> _redditPosts;
         private IRedditService _redditService = Resolver.Resolve<IRedditService>();
+        private Image _xEmilImage;
 
         public ImageButton FacebookImageButton
         {
@@ -27,6 +29,25 @@ namespace xEmilForms.ViewModel
             set { SetProperty(ref _redditPosts, value); }
         }
 
+        public Image xEmilImage
+        {
+            get
+            {
+                return _xEmilImage ?? (_xEmilImage = new WebImage()
+                {
+                    ImageUrl = "http://i.imgur.com/98skoLT.png"
+                });
+            }
+            set { SetProperty(ref _xEmilImage, value); }
+        }
+
+        public ButtonPageViewModel()
+        {
+            _xEmilImage = new Image()
+            {
+                Source = "xÉmilButton900x150.png"
+            };
+        }
 
         //public Command LoadRedditPostsCommand { get; set; }
 

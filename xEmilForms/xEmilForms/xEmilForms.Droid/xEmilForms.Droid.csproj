@@ -51,6 +51,8 @@
     <Reference Include="FormsViewGroup">
       <HintPath>..\..\packages\Xamarin.Forms.1.4.0.6341\lib\MonoAndroid10\FormsViewGroup.dll</HintPath>
     </Reference>
+    <Reference Include="Mono.Android" />
+    <Reference Include="Mono.Android.Export" />
     <Reference Include="mscorlib" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -97,8 +99,33 @@
     <AndroidResource Include="Resources\drawable\tretton900x150.png" />
     <AndroidResource Include="Resources\drawable\xamarin807x716.png" />
     <AndroidResource Include="Resources\drawable\xEmilButton900x150.png" />
+    <AndroidResource Include="Resources\drawable\EssentialLund_Huvud850x718.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Xamarin-Forms-Labs\src\Forms\XLabs.Forms.Droid\XLabs.Forms.Droid.csproj">
+      <Project>{e11e6ab0-2d1d-4b50-a835-7c6b342797ef}</Project>
+      <Name>XLabs.Forms.Droid</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Xamarin-Forms-Labs\src\Forms\XLabs.Forms\XLabs.Forms.csproj">
+      <Project>{dc0bdd11-9352-44e4-bceb-8ae56794bb41}</Project>
+      <Name>XLabs.Forms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Xamarin-Forms-Labs\src\IOC\XLabs.Ioc\XLabs.Ioc.csproj">
+      <Project>{2e200799-1170-49bf-a4aa-2a9228f8a213}</Project>
+      <Name>XLabs.Ioc</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Xamarin-Forms-Labs\src\Platform\XLabs.Platform.Droid\XLabs.Platform.Droid.csproj">
+      <Project>{f422fd34-e431-4758-a981-03552a7bcf13}</Project>
+      <Name>XLabs.Platform.Droid</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Xamarin-Forms-Labs\src\Platform\XLabs.Platform\XLabs.Platform.csproj">
+      <Project>{2a4d9dd4-326c-4824-aa3c-a9ed45cc898c}</Project>
+      <Name>XLabs.Platform</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Xamarin-Forms-Labs\src\XLabs.Core\XLabs.Core.csproj">
+      <Project>{15d9c404-f7e2-49f0-acc9-63c4c008c860}</Project>
+      <Name>XLabs.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\xEmilForms\xEmilForms.csproj">
       <Project>{7bc0bc68-7bb0-44c6-9f14-2d71481a44bf}</Project>
       <Name>xEmilForms</Name>

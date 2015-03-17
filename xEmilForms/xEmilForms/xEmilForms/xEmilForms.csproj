@@ -42,19 +42,21 @@
     <Compile Include="Controls\InfiniteListView.cs" />
     <Compile Include="Exception\NoViewException.cs" />
     <Compile Include="Model\RedditPost.cs" />
-    <Compile Include="Pages\LoginPageXML.xaml.cs">
-      <DependentUpon>LoginPageXML.xaml</DependentUpon>
+    <Compile Include="Pages\ButtonPage.xaml.cs">
+      <DependentUpon>ButtonPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ViewModel\LoginPageVM.cs" />
+    <Compile Include="Pages\MvvmSamplePage.xaml.cs">
+      <DependentUpon>MvvmSamplePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\NewPageView.xaml.cs">
+      <DependentUpon>NewPageView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModel\ButtonPageViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\IRedditService.cs" />
     <Compile Include="Services\RedditServiceMocked.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Pages\LoginPageXML.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </EmbeddedResource>
+    <Compile Include="ViewModel\MvvmSampleViewModel.cs" />
+    <Compile Include="ViewModel\NewPageViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">
@@ -65,7 +67,45 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Xamarin-Forms-Labs\src\Forms\XLabs.Forms\XLabs.Forms.csproj">
+      <Project>{dc0bdd11-9352-44e4-bceb-8ae56794bb41}</Project>
+      <Name>XLabs.Forms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Xamarin-Forms-Labs\src\IOC\XLabs.Ioc\XLabs.Ioc.csproj">
+      <Project>{2e200799-1170-49bf-a4aa-2a9228f8a213}</Project>
+      <Name>XLabs.Ioc</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Xamarin-Forms-Labs\src\Platform\XLabs.Platform\XLabs.Platform.csproj">
+      <Project>{2a4d9dd4-326c-4824-aa3c-a9ed45cc898c}</Project>
+      <Name>XLabs.Platform</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Xamarin-Forms-Labs\src\XLabs.Core\XLabs.Core.csproj">
+      <Project>{15d9c404-f7e2-49f0-acc9-63c4c008c860}</Project>
+      <Name>XLabs.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\MvvmSamplePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\NewPageView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\ButtonPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

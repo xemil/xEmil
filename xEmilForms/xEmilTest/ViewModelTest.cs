@@ -9,7 +9,7 @@ namespace xEmilTest
         [TestMethod]
         public void TestMethod1()
         {
-            var vm = new LoadPageViewModel();
+            var vm = new ButtonPageViewModel();
             
         }
     }

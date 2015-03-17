@@ -1,10 +1,15 @@
-﻿using Xamarin.Forms;
-using xEmilForms.Services;
-using XLabs.Forms;
-using XLabs.Ioc;
-using XLabs.Platform.Device;
-using XLabs.Platform.Mvvm;
-using XLabs.Platform.Services;
+﻿using xEmilForms.Services;
+    using System.IO;
+    using Android.App;
+    using Android.Content.PM;
+    using Android.OS;
+    using XLabs.Platform.Services;
+    using XLabs.Forms;
+    using XLabs.Ioc;
+    using XLabs.Platform.Device;
+    using XLabs.Platform.Mvvm;
+
+
 
 namespace xEmilForms.Droid
 {
@@ -27,7 +32,8 @@ namespace xEmilForms.Droid
             }
 
 
-            Forms.Init(this, bundle);
+            Xamarin.Forms.Forms.Init(this, bundle);
+            App.Init();
 
             LoadApplication(new App());
         }

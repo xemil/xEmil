@@ -4,8 +4,9 @@
                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                xmlns:mvvm="clr-namespace:XLabs.Forms.Mvvm;assembly=XLabs.Forms"
                xmlns:controls="clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms"
-               x:Class="xEmilForms.Pages.LoadingPageXML"
-               Title="TEST">
+               x:Class="xEmilForms.Pages.ButtonPage"
+               Title="TEST"
+               BackgroundColor="White">
     <mvvm:BaseView.Content>
         <ScrollView>
             <ScrollView.Padding>
@@ -14,11 +15,14 @@
                             Android="20,20,20,20"
                             WinPhone="20,20,20,20" />
             </ScrollView.Padding>
-            <StackLayout>
-                <controls:ImageButton x:Name="xEmilButton" Text="xEmilText" BackgroundColor="#01abdf"
-                                      TextColor="#ffffff"
-                                      HeightRequest="150" WidthRequest="900" Orientation="ImageToLeft"
-                                      ImageHeightRequest="150" ImageWidthRequest="900">
+            
+              <StackLayout>
+                <ContentView Padding="0, 20, 0, 0">
+                  <Label Text="TEST"></Label>
+                </ContentView>
+                 <ContentView Padding="30,30,30,30" >
+              <controls:ImageButton x:Name="xEmilButton" Text="xEmilText" BackgroundColor="#01abdf"
+                                      TextColor="#ffffff">
                     <controls:ImageButton.Source>
                         <OnPlatform x:TypeArguments="ImageSource">
                             <OnPlatform.iOS>
@@ -33,6 +37,7 @@
                         </OnPlatform>
                     </controls:ImageButton.Source>
                 </controls:ImageButton>
+                  </ContentView>
             </StackLayout>
         </ScrollView>
     </mvvm:BaseView.Content>

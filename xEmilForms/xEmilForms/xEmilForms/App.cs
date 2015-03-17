@@ -17,7 +17,7 @@ namespace xEmilForms
             MainPage = GetMainPage();
         }
 
-        private void Init()
+        public static void Init()
         {
             var app = Resolver.Resolve<IXFormsApp>();
             if (app == null)
@@ -36,13 +36,13 @@ namespace xEmilForms
         private Page GetMainPage()
         {
             RegisterAllVm();
-            return new LoginPageXML();
+            return new ButtonPage();
         }
 
         private void RegisterAllVm()
         {
             //ViewFactory.Register<RedditPostPage, RedditPostViewModel>();
-            ViewFactory.Register<LoginPageXML, LoadPageViewModel>();
+            ViewFactory.Register<ButtonPage, ButtonPageViewModel>();
         }
 
         protected override void OnStart()
