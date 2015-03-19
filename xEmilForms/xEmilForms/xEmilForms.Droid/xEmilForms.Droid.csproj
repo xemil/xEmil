@@ -99,7 +99,7 @@
     <AndroidResource Include="Resources\drawable\tretton900x150.png" />
     <AndroidResource Include="Resources\drawable\xamarin807x716.png" />
     <AndroidResource Include="Resources\drawable\xEmilButton900x150.png" />
-    <AndroidResource Include="Resources\drawable\EssentialLund_Huvud850x718.png" />
+    <AndroidResource Include="Resources\drawable\xEmilImage850x718.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Xamarin-Forms-Labs\src\Forms\XLabs.Forms.Droid\XLabs.Forms.Droid.csproj">

@@ -2,6 +2,7 @@
 using System.Resources;
 using Xamarin.Forms;
 using xEmilForms.Model;
+using xEmilForms.Pages;
 using xEmilForms.Services;
 using XLabs.Forms.Controls;
 using XLabs.Forms.Mvvm;
@@ -9,7 +10,7 @@ using XLabs.Ioc;
 
 namespace xEmilForms.ViewModel
 {
-    [ViewType(typeof (ButtonPageViewModel))]
+    [ViewType(typeof (ButtonPage))]
     public class ButtonPageViewModel : XLabs.Forms.Mvvm.ViewModel
     {
         private ImageButton _facebookImageButton;
@@ -33,9 +34,10 @@ namespace xEmilForms.ViewModel
         {
             get
             {
-                return _xEmilImage ?? (_xEmilImage = new WebImage()
+                return _xEmilImage ?? (_xEmilImage = new Image()
                 {
-                    ImageUrl = "http://i.imgur.com/98skoLT.png"
+                    Source = "xEmilImage850x718.png",
+                    //ImageUrl = "http://i.imgur.com/98skoLT.png"
                 });
             }
             set { SetProperty(ref _xEmilImage, value); }
