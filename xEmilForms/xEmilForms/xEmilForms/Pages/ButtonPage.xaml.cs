@@ -1,5 +1,6 @@
 ﻿using xEmilForms.ViewModel;
 using XLabs.Forms.Mvvm;
+using xEmilTest
 
 namespace xEmilForms.Pages
 {

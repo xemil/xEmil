@@ -7,9 +7,12 @@ namespace xEmilTest
     public class ViewModelTest
     {
         [TestMethod]
-        public void TestMethod1()
+        public void ViewModelNullTest1(ButtonPageViewModel vm)
         {
-            var vm = new ButtonPageViewModel();
+            if (vm == null || vm.RedditPosts.Count <= 0)
+            {
+                new AssertFailedException("Button VM = 0 || Reddistpostcount <= 0");
+            }
             
         }
     }
