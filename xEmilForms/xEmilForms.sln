@@ -7,6 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xEmilForms", "xEmilForms\xE
 	ProjectSection(ProjectDependencies) = postProject
 		{15D9C404-F7E2-49F0-ACC9-63C4C008C860} = {15D9C404-F7E2-49F0-ACC9-63C4C008C860}
 		{DC0BDD11-9352-44E4-BCEB-8AE56794BB41} = {DC0BDD11-9352-44E4-BCEB-8AE56794BB41}
+		{DC133A2F-E49E-49E3-B43D-BFB957CB5482} = {DC133A2F-E49E-49E3-B43D-BFB957CB5482}
 		{2E200799-1170-49BF-A4AA-2A9228F8A213} = {2E200799-1170-49BF-A4AA-2A9228F8A213}
 		{2A4D9DD4-326C-4824-AA3C-A9ED45CC898C} = {2A4D9DD4-326C-4824-AA3C-A9ED45CC898C}
 	EndProjectSection
@@ -224,6 +225,11 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Cryptography", "Cryptography", "{9F367697-B9AF-4B7A-802A-23B802DAA354}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XLabs.Cryptography", "..\Xamarin-Forms-Labs\src\Cryptography\XLabs.Cryptography\XLabs.Cryptography.csproj", "{57FF8D32-1575-4DC5-BD37-2D92A9A67031}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "contrib", "contrib", "{9064737D-E9A0-4F06-BAAD-97F61274A2A5}"
+	ProjectSection(SolutionItems) = preProject
+		EmilApelgren.txt = EmilApelgren.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

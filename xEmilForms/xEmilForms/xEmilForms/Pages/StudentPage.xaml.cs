@@ -3,9 +3,9 @@ using XLabs.Forms.Mvvm;
 
 namespace xEmilForms.Pages
 {
-    public partial class ButtonPage : XLabs.Forms.Mvvm.BaseView
+    public partial class StudentPage : XLabs.Forms.Mvvm.BaseView
     {
-        public ButtonPage()
+        public StudentPage()
         {
             InitializeComponent();
             BindingContext = new ButtonPageViewModel();

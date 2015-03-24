@@ -51,12 +51,15 @@
     <Compile Include="Pages\NewPageView.xaml.cs">
       <DependentUpon>NewPageView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\StudentPage.xaml.cs">
+      <DependentUpon>StudentPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ViewModel\ButtonPageViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\IRedditService.cs" />
     <Compile Include="Services\RedditServiceMocked.cs" />
     <Compile Include="ViewModel\MvvmSampleViewModel.cs" />
-    <Compile Include="ViewModel\NewPageViewModel.cs" />
+    <Compile Include="ViewModel\StudenPageViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">
@@ -72,6 +75,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Xamarin-Forms-Labs\Samples\XLabs.Sample\XLabs.Sample.csproj">
+      <Project>{dc133a2f-e49e-49e3-b43d-bfb957cb5482}</Project>
+      <Name>XLabs.Sample</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\Xamarin-Forms-Labs\src\Forms\XLabs.Forms\XLabs.Forms.csproj">
       <Project>{dc0bdd11-9352-44e4-bceb-8ae56794bb41}</Project>
       <Name>XLabs.Forms</Name>
@@ -103,6 +110,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Pages\ButtonPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\StudentPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>

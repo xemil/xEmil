@@ -1,10 +1,19 @@
-﻿namespace xEmilForms.ViewModel
+﻿using System;
+using System.Windows.Input;
+using Xamarin.Forms;
+using XLabs.Ioc;
+using XLabs.Platform.Device;
+using XLabs.Platform.Services.Geolocation;
+using XLabs.Sample.ViewModel;
+using PositionExtensions = XLabs.Platform.PositionExtensions;
+
+namespace xEmilForms.ViewModel
 {
 	//[ViewType(typeof(NewPageView))] can specify this
 	/// <summary>
 	/// Class NewPageViewModel.
 	/// </summary>
-	public class NewPageViewModel : XLabs.Forms.Mvvm.ViewModel
+	public class NewPageViewModel : GeolocatorViewModel
 	{
 		/// <summary>
 		/// Initializes a new instance of the <see cref="NewPageViewModel"/> class.
@@ -15,6 +24,8 @@
 						ViewFactory.Register<NewPageView,NewPageViewModel> ();
 						We can also navigate to this page from any view model using the following code: 
 						await Navigation.PushAsync<NewPageViewModel>() ";
+		    
+            CurrentBingUri = PositionExtensions.ToBingMaps()
 
 		}
 
@@ -58,6 +69,24 @@
 				this.SetProperty(ref _pageTitle, value);
 			}
 		}
+
+	  
+        private ICommand _getGMapsUri;
+
+	    public ICommand GetGMapsUri
+	    {
+	        get
+	        {
+	            return _getGMapsUri ?? (_getGMapsUri = new Command(async () =>
+	            {
+	                PositionExtensions.ToGoogleMaps(new Position()
+	                {
+	                    Latitude = PositionLatitude;
+	                })
+	            }))
+	        }
+	        set;
+	    }
 	}
 }
 

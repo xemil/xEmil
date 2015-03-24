@@ -2,6 +2,9 @@
 using xEmilForms.Pages;
 using XLabs.Forms.Mvvm;
 
+//REMOVE!!
+using XLabs.Sample.ViewModel;
+
 namespace xEmilForms.ViewModel
 {
     /// <summary>

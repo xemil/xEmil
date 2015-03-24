@@ -36,13 +36,14 @@ namespace xEmilForms
         private Page GetMainPage()
         {
             RegisterAllVm();
-            return new ButtonPage();
+            return new StudentPage();
         }
 
         private void RegisterAllVm()
         {
             //ViewFactory.Register<RedditPostPage, RedditPostViewModel>();
-            ViewFactory.Register<ButtonPage, ButtonPageViewModel>();
+            //ViewFactory.Register<ButtonPage, ButtonPageViewModel>();
+            ViewFactory.Register<StudentPage, StudentPageViewModel>();
         }
 
         protected override void OnStart()
