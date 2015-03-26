@@ -51,15 +51,15 @@ namespace xEmilForms.ViewModel
             };
         }
 
-        //public Command LoadRedditPostsCommand { get; set; }
+        public Command LoadRedditPostsCommand { get; set; }
 
-        //private void LoadRedditPosts()
-        //{
-        //    var collectedRedditPosts = _redditService.Get(RedditPosts.Count, 15);
-        //    foreach (var redditPost in collectedRedditPosts)
-        //    {
-        //        RedditPosts.Add(redditPost);
-        //    }
-        //}
+        private void LoadRedditPosts()
+        {
+            var collectedRedditPosts = _redditService.Get(RedditPosts.Count, 15);
+            foreach (var redditPost in collectedRedditPosts)
+            {
+                RedditPosts.Add(redditPost);
+            }
+        }
     }
 }

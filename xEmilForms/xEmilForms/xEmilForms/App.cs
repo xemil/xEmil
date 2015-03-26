@@ -36,12 +36,12 @@ namespace xEmilForms
         private Page GetMainPage()
         {
             RegisterAllVm();
-            return new StudentPage();
+            return new RedditPostPage();
         }
 
         private void RegisterAllVm()
         {
-            //ViewFactory.Register<RedditPostPage, RedditPostViewModel>();
+            ViewFactory.Register<RedditPostPage, RedditPostViewModel>();
             //ViewFactory.Register<ButtonPage, ButtonPageViewModel>();
             ViewFactory.Register<StudentPage, StudentPageViewModel>();
         }

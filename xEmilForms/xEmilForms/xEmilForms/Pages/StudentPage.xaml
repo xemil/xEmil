@@ -1,5 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-
 <mvvm:BaseView xmlns="http://xamarin.com/schemas/2014/forms"
                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                xmlns:mvvm="clr-namespace:XLabs.Forms.Mvvm;assembly=XLabs.Forms"
@@ -9,7 +8,7 @@
                BackgroundColor="Black">
   <mvvm:BaseView.Content>
       <StackLayout>
-          <Label Text="TEST"></Label>
+        <Label Text="TEST"></Label>
         <controls:WebImage ImageUrl="http://oi58.tinypic.com/bf0uns.jpg"/>
       </StackLayout>
   </mvvm:BaseView.Content>
