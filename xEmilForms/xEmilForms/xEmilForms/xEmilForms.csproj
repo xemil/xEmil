@@ -41,12 +41,14 @@
     <Compile Include="Cell\RedditCellNew.cs" />
     <Compile Include="Controls\InfiniteListView.cs" />
     <Compile Include="Exception\NoViewException.cs" />
+    <Compile Include="Model\FacebookUser.cs" />
     <Compile Include="Model\RedditPost.cs" />
     <Compile Include="Pages\ButtonPage.xaml.cs">
       <DependentUpon>ButtonPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\ListPage.xaml.cs">
-      <DependentUpon>ListPage.xaml</DependentUpon>
+    <Compile Include="Pages\FBLoginPage.cs" />
+    <Compile Include="Pages\LoginPage.xaml.cs">
+      <DependentUpon>LoginPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\MvvmSamplePage.xaml.cs">
       <DependentUpon>MvvmSamplePage.xaml</DependentUpon>
@@ -57,17 +59,13 @@
     <Compile Include="Pages\RedditPostPage.xaml.cs">
       <DependentUpon>RedditPostPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\StudentPage.xaml.cs">
-      <DependentUpon>StudentPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="ViewModel\ButtonPageViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\IRedditService.cs" />
     <Compile Include="Services\RedditServiceMocked.cs" />
-    <Compile Include="ViewModel\ListPageViewModel.cs" />
+    <Compile Include="ViewModel\LoginViewModel.cs" />
     <Compile Include="ViewModel\MvvmSampleViewModel.cs" />
     <Compile Include="ViewModel\RedditPostViewModel.cs" />
-    <Compile Include="ViewModel\StudenPageViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">
@@ -123,22 +121,16 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Pages\StudentPage.xaml">
+    <EmbeddedResource Include="Pages\LoginPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Pages\ListPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <Page Include="Pages\RedditPostPage.xaml">
+    <EmbeddedResource Include="Pages\RedditPostPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
-    </Page>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

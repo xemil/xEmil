@@ -14,7 +14,10 @@ namespace xEmilForms
         {
             // The root page of your application
             Init();
-            MainPage = GetMainPage();
+            RegisterAllVm();
+            var mainPage = GetMainPage();
+            var navPage = new NavigationPage(mainPage);
+            MainPage = navPage;
         }
 
         public static void Init()
@@ -35,15 +38,15 @@ namespace xEmilForms
 
         private Page GetMainPage()
         {
-            RegisterAllVm();
-            return new RedditPostPage();
+            var loginPage = ViewFactory.CreatePage<LoginViewModel, Page>() as Page;
+            return loginPage;
         }
 
         private void RegisterAllVm()
         {
-            ViewFactory.Register<RedditPostPage, RedditPostViewModel>();
+            //ViewFactory.Register<RedditPostPage, RedditPostViewModel>();
             //ViewFactory.Register<ButtonPage, ButtonPageViewModel>();
-            ViewFactory.Register<StudentPage, StudentPageViewModel>();
+            ViewFactory.Register<LoginPage, LoginViewModel>();
         }
 
         protected override void OnStart()
