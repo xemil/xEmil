@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="auto">
-	<uses-sdk android:minSdkVersion="19" />
+	<uses-sdk android:minSdkVersion="14" />
 	<application android:label="xemil" android:icon="@drawable/xEmilImage850x718"></application>
 	<uses-permission android:name="android.permission.ACCOUNT_MANAGER" />
 	<uses-permission android:name="android.permission.ACCESS_CHECKIN_PROPERTIES" />

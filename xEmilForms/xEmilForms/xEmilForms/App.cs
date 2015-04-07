@@ -38,8 +38,9 @@ namespace xEmilForms
 
         private Page GetMainPage()
         {
-            var loginPage = ViewFactory.CreatePage<LoginViewModel, Page>() as Page;
-            return loginPage;
+            //var loginPage = ViewFactory.CreatePage<LoginViewModel, Page>() as Page;
+            var facebookpage = new FBLoginPage();
+            return facebookpage;
         }
 
         private void RegisterAllVm()
