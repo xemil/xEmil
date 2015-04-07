@@ -43,8 +43,6 @@ namespace xEmilForms.Droid.Render
                 }
                 var prop = ee.Account.Properties.Values;
 
-                var tee = 1;
-
             };
         }
     }
