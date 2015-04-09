@@ -89,7 +89,7 @@ namespace xEmilForms.ViewModel
                 });
         }
 
-        private FacebookPictureResponse LoadProfilePic(string userId)
+        private Task<FacebookPictureResponse> LoadProfilePic(string userId)
         {
                 var secureStorage = Resolver.Resolve<ISecureStorage>();
                 var token = ByteArrayConverter.GetString(secureStorage.Retrieve("fbToken"));      
