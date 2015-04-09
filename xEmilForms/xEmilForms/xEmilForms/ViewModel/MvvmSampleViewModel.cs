@@ -2,8 +2,6 @@
 using xEmilForms.Pages;
 using XLabs.Forms.Mvvm;
 
-//REMOVE!!
-using XLabs.Sample.ViewModel;
 
 namespace xEmilForms.ViewModel
 {
@@ -27,7 +25,7 @@ namespace xEmilForms.ViewModel
 			get
 			{
 				return _navigateToViewModel ?? (_navigateToViewModel = new Command(
-					async () => NavigationService.NavigateTo<NewPageViewModel>(),
+					async () => NavigationService.NavigateTo<FacebookViewModel>(),
 																		   () => true));
 			}
 		}

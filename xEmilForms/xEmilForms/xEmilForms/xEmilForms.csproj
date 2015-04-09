@@ -11,7 +11,7 @@
     <RootNamespace>xEmilForms</RootNamespace>
     <AssemblyName>xEmilForms</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Profile78</TargetFrameworkProfile>
+    <TargetFrameworkProfile>Profile7</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <NuGetPackageImportStamp>38f16a25</NuGetPackageImportStamp>
@@ -41,10 +41,17 @@
     <Compile Include="Cell\RedditCellNew.cs" />
     <Compile Include="Controls\InfiniteListView.cs" />
     <Compile Include="Exception\NoViewException.cs" />
+    <Compile Include="Helpers\ByteArrayConverter.cs" />
+    <Compile Include="Helpers\FacebookRest.cs" />
+    <Compile Include="Helpers\JSON\FacebookPictureResponse.cs" />
     <Compile Include="Model\FacebookUser.cs" />
+    <Compile Include="Helpers\JSON\FacebookMeResponse.cs" />
     <Compile Include="Model\RedditPost.cs" />
     <Compile Include="Pages\ButtonPage.xaml.cs">
       <DependentUpon>ButtonPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\FacebookPage.xaml.cs">
+      <DependentUpon>FacebookPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\FBLoginPage.cs" />
     <Compile Include="Pages\LoginPage.xaml.cs">
@@ -63,6 +70,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\IRedditService.cs" />
     <Compile Include="Services\RedditServiceMocked.cs" />
+    <Compile Include="ViewModel\FacebookViewModel.cs" />
     <Compile Include="ViewModel\LoginViewModel.cs" />
     <Compile Include="ViewModel\MvvmSampleViewModel.cs" />
     <Compile Include="ViewModel\RedditPostViewModel.cs" />
@@ -81,10 +89,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Xamarin-Forms-Labs\Samples\XLabs.Sample\XLabs.Sample.csproj">
-      <Project>{dc133a2f-e49e-49e3-b43d-bfb957cb5482}</Project>
-      <Name>XLabs.Sample</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\..\Xamarin-Forms-Labs\src\Forms\XLabs.Forms\XLabs.Forms.csproj">
       <Project>{dc0bdd11-9352-44e4-bceb-8ae56794bb41}</Project>
       <Name>XLabs.Forms</Name>
@@ -96,6 +100,22 @@
     <ProjectReference Include="..\..\..\Xamarin-Forms-Labs\src\Platform\XLabs.Platform\XLabs.Platform.csproj">
       <Project>{2a4d9dd4-326c-4824-aa3c-a9ed45cc898c}</Project>
       <Name>XLabs.Platform</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Xamarin-Forms-Labs\src\Serialization\JsonNET\XLabs.Serialization.JsonNET.csproj">
+      <Project>{fce4e482-0df8-43ac-b574-8aaf74770d1c}</Project>
+      <Name>XLabs.Serialization.JsonNET</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Xamarin-Forms-Labs\src\Serialization\XLabs.Serialization\XLabs.Serialization.csproj">
+      <Project>{8E7F7522-F018-466A-AA8A-147EE9341BA0}</Project>
+      <Name>XLabs.Serialization</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Xamarin-Forms-Labs\src\Web\XLabs.Web\XLabs.Web.csproj">
+      <Project>{d66d0e8a-4350-4f95-90f8-86f2fb1a45a3}</Project>
+      <Name>XLabs.Web</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Xamarin-Forms-Labs\src\Web\XLabs.Web\XLabs.Web.PortableClient.csproj">
+      <Project>{208E60B3-2771-4D94-9523-1C612592D891}</Project>
+      <Name>XLabs.Web.PortableClient</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Xamarin-Forms-Labs\src\XLabs.Core\XLabs.Core.csproj">
       <Project>{15d9c404-f7e2-49f0-acc9-63c4c008c860}</Project>
@@ -130,6 +150,12 @@
     <EmbeddedResource Include="Pages\RedditPostPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\FacebookPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />

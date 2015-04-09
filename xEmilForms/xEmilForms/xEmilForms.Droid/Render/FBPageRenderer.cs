@@ -33,7 +33,7 @@ namespace xEmilForms.Droid.Render
             base.OnElementChanged(e);
              var auth = new OAuth2Authenticator(
                 clientId: "428095124009332",
-                scope: "",
+                scope: "email, user_friends",
                 authorizeUrl: new Uri("https://m.facebook.com/dialog/oauth/"),
                 redirectUrl: new Uri("http://www.facebook.com/connect/login_success.html")
                 );

@@ -53,6 +53,7 @@ namespace xEmilForms
             //ViewFactory.Register<RedditPostPage, RedditPostViewModel>();
             ViewFactory.Register<ButtonPage, ButtonPageViewModel>();
             ViewFactory.Register<LoginPage, LoginViewModel>();
+            ViewFactory.Register<FacebookPage, FacebookViewModel>();
         }
 
         protected override void OnStart()
@@ -74,7 +75,7 @@ namespace xEmilForms
         {
             get
             {
-                var newPage = ViewFactory.CreatePage<ButtonPageViewModel, Page>() as Page; 
+                var newPage = ViewFactory.CreatePage<FacebookViewModel, Page>() as Page; 
                 return new Action(() => _navigationPage.PushAsync(newPage));
             }
             
