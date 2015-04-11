@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using System.Threading;
 using Android.App;
 using Android.Content;
 using Android.OS;
@@ -42,7 +42,6 @@ namespace xEmilForms.Droid.Render
             var intent = auth.GetUI(this.Context);
             var activity = this.Context as Activity;
             activity.StartActivity(intent);
-
             //LISTEN FOR AUTH
             auth.Completed += (s, ee) =>
             {
@@ -63,9 +62,15 @@ namespace xEmilForms.Droid.Render
                     System.Buffer.BlockCopy(fbToken.ToCharArray(), 0, bytes, 0, bytes.Length);
                     secureStorage.Store("fbToken", bytes);
                 }
+                System.Diagnostics.Debug.WriteLine("STARTING SLEEP THREAD");
+                Thread.Sleep(3000);
+                System.Diagnostics.Debug.WriteLine("Completed SLEEP THREAD");
+                
+                App.GoToLoadingScreen().Invoke();
 
-                App.GoToPageAfterAuthAction.Invoke();
+
             };
+            
         }
     }
 }

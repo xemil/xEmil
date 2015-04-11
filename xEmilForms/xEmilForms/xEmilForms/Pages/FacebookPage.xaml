@@ -6,6 +6,10 @@
                x:Class="xEmilForms.Pages.FacebookPage"
                Title="TEST"
                BackgroundColor="Black">
-      <Label Text="{Binding LoggedinFacebookUser.FirstName}" VerticalOptions="Center" HorizontalOptions="Center"/>
-      <Label Text="{Binding LoggedinFacebookUser.Gender}" VerticalOptions="Center" HorizontalOptions="Center"/>
+  <ActivityIndicator IsVisible="{Binding IsLoading}" IsRunning="{Binding IsLoading}"></ActivityIndicator>
+  <StackLayout>
+    <controls:WebImage ImageUrl="{Binding LoggedinFacebookUser.ProfileImage.ImageUrl}"></controls:WebImage>
+    <Label Text="{Binding LoggedinFacebookUser.FirstName}" VerticalOptions="Center" HorizontalOptions="Center"/>
+    <Label Text="{Binding LoggedinFacebookUser.Gender}" VerticalOptions="Center" HorizontalOptions="Center"/>
+  </StackLayout>
 </mvvm:BaseView>

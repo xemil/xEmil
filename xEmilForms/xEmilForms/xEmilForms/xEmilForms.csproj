@@ -44,6 +44,7 @@
     <Compile Include="Helpers\ByteArrayConverter.cs" />
     <Compile Include="Helpers\FacebookRest.cs" />
     <Compile Include="Helpers\JSON\FacebookPictureResponse.cs" />
+    <Compile Include="Helpers\JSON\RootObject.cs" />
     <Compile Include="Model\FacebookUser.cs" />
     <Compile Include="Helpers\JSON\FacebookMeResponse.cs" />
     <Compile Include="Model\RedditPost.cs" />
@@ -54,6 +55,9 @@
       <DependentUpon>FacebookPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\FBLoginPage.cs" />
+    <Compile Include="Pages\LoadingScreenPage.xaml.cs">
+      <DependentUpon>LoadingScreenPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>
     </Compile>
@@ -66,14 +70,22 @@
     <Compile Include="Pages\RedditPostPage.xaml.cs">
       <DependentUpon>RedditPostPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\StartPage.xaml.cs">
+      <DependentUpon>StartPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Services\FacebookRestService.cs" />
+    <Compile Include="Services\IFacebookService.cs" />
     <Compile Include="ViewModel\ButtonPageViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\IRedditService.cs" />
     <Compile Include="Services\RedditServiceMocked.cs" />
     <Compile Include="ViewModel\FacebookViewModel.cs" />
+    <Compile Include="ViewModel\FBLoginPageViewModel.cs" />
+    <Compile Include="ViewModel\LoadingScreenViewModel.cs" />
     <Compile Include="ViewModel\LoginViewModel.cs" />
     <Compile Include="ViewModel\MvvmSampleViewModel.cs" />
     <Compile Include="ViewModel\RedditPostViewModel.cs" />
+    <Compile Include="ViewModel\StartPageViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">
@@ -154,6 +166,21 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Pages\FacebookPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\StartPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\LoadingScreenPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>

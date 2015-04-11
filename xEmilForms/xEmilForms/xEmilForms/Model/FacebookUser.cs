@@ -8,7 +8,7 @@ using XLabs.Forms.Controls;
 
 namespace xEmilForms.Helpers
 {
-    class FacebookUser : ObservableObject
+    public class FacebookUser : ObservableObject
     {
         private string _id;
         public string Id

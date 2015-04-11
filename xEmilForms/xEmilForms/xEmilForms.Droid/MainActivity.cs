@@ -1,4 +1,5 @@
-﻿using xEmilForms.Services;
+﻿using Android.Graphics.Drawables;
+using xEmilForms.Services;
     using System.IO;
     using Android.App;
     using Android.Content.PM;
@@ -35,6 +36,16 @@ namespace xEmilForms.Droid
             Xamarin.Forms.Forms.Init(this, bundle);
             App.Init();
 
+            
+            //SET ACTIONBAR
+            if ((int)Android.OS.Build.VERSION.SdkInt >= 19)
+            {
+                ActionBar.SetIcon(
+                  new ColorDrawable(Resources.GetColor(Android.Resource.Color.Transparent)));
+            }
+            
+            
+            
             LoadApplication(new App());
         }
 

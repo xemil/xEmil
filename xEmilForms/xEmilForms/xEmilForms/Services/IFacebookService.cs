@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using xEmilForms.Helpers;
 
 namespace xEmilForms.Services
 {
-    class IFacebookService
+    public interface IFacebookService
     {
-        public List<T> todo; 
+        Task SetLoggedInFacebookUserTask(FacebookUser fb);
+        Task SetProfilePictureTask(FacebookUser fb);
+
     }
 }

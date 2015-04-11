@@ -15,7 +15,7 @@ namespace xEmilForms
     {
 
         static NavigationPage _navigationPage;
-        
+
         public App()
         {
             // The root page of your application
@@ -45,7 +45,9 @@ namespace xEmilForms
         private Page GetMainPage()
         {
             var loginPage = ViewFactory.CreatePage<LoginViewModel, Page>() as Page;
-            return new FBLoginPage();
+            var buttonPage = ViewFactory.CreatePage<ButtonPageViewModel, Page>() as Page;
+            var startPage = ViewFactory.CreatePage<StartPageViewModel, Page>() as Page;
+            return startPage;
         }
 
         private void RegisterAllVm()
@@ -54,6 +56,10 @@ namespace xEmilForms
             ViewFactory.Register<ButtonPage, ButtonPageViewModel>();
             ViewFactory.Register<LoginPage, LoginViewModel>();
             ViewFactory.Register<FacebookPage, FacebookViewModel>();
+            ViewFactory.Register<StartPage, StartPageViewModel>();
+            ViewFactory.Register<FBLoginPage, FBLoginPageViewModel>();
+            ViewFactory.Register<LoadingScreenPage, LoadingScreenViewModel>();
+
         }
 
         protected override void OnStart()
@@ -71,15 +77,27 @@ namespace xEmilForms
             // Handle when your app resumes
         }
 
-        public static Action GoToPageAfterAuthAction 
+        public static Action GoToLoadingScreen()
         {
-            get
-            {
-                var newPage = ViewFactory.CreatePage<FacebookViewModel, Page>() as Page; 
-                return new Action(() => _navigationPage.PushAsync(newPage));
-            }
-            
+
+            var newPage = ViewFactory.CreatePage<LoadingScreenViewModel, Page>() as Page;
+            return new Action(() => _navigationPage.PushAsync(newPage));
+
+        }
+
+        public static Action GoToAuthAction()
+        {
+
+            var authPage = new FBLoginPage();
+            return new Action(() => _navigationPage.PushAsync(authPage));
+
+        }
+
+        public static Action GoToFBPage()
+        {
+            var newPage = ViewFactory.CreatePage<FacebookViewModel, Page>() as Page;
+            return new Action(() => _navigationPage.PushAsync(newPage));
         }
     }
-    
+
 }

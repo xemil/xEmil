@@ -23,7 +23,7 @@
     <MandroidI18n />
     <JavaMaximumHeapSize />
     <JavaOptions />
-    <NuGetPackageImportStamp>30ecbcaf</NuGetPackageImportStamp>
+    <NuGetPackageImportStamp>100e6e3c</NuGetPackageImportStamp>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\</SolutionDir>
     <RestorePackages>true</RestorePackages>
   </PropertyGroup>
@@ -111,6 +111,9 @@
     <AndroidResource Include="Resources\drawable\xEmilButton900x150.png" />
     <AndroidResource Include="Resources\drawable\xEmilImage850x718.png" />
     <AndroidResource Include="Resources\drawable\FloId650x447.png" />
+    <AndroidResource Include="Resources\values\styles.xml" />
+    <AndroidResource Include="Resources\values-v21\styles.xml" />
+    <AndroidResource Include="Resources\values\colors.xml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Xamarin-Forms-Labs\src\Forms\XLabs.Forms.Droid\XLabs.Forms.Droid.csproj">
@@ -132,6 +135,14 @@
     <ProjectReference Include="..\..\..\Xamarin-Forms-Labs\src\Platform\XLabs.Platform\XLabs.Platform.csproj">
       <Project>{2a4d9dd4-326c-4824-aa3c-a9ed45cc898c}</Project>
       <Name>XLabs.Platform</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Xamarin-Forms-Labs\src\Web\XLabs.Web\XLabs.Web.csproj">
+      <Project>{d66d0e8a-4350-4f95-90f8-86f2fb1a45a3}</Project>
+      <Name>XLabs.Web</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Xamarin-Forms-Labs\src\Web\XLabs.Web\XLabs.Web.Droid.csproj">
+      <Project>{2e1d51ed-2850-4c22-94f9-73f11b7864b9}</Project>
+      <Name>XLabs.Web.Droid</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Xamarin-Forms-Labs\src\XLabs.Core\XLabs.Core.csproj">
       <Project>{15d9c404-f7e2-49f0-acc9-63c4c008c860}</Project>

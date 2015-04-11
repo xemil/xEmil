@@ -3,14 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using XLabs.Serialization.JsonNET;
 
 namespace xEmilForms.Helpers.JSON
 {
-    class FacebookPictureResponse
+    class RootObject
     {
-        public string url { get; set; }
+        public List<FacebookPictureResponse> data { get; set; }
     }
-
-
 }
