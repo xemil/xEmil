@@ -63,10 +63,9 @@ namespace xEmilForms.Droid.Render
                     secureStorage.Store("fbToken", bytes);
                 }
                 System.Diagnostics.Debug.WriteLine("STARTING SLEEP THREAD");
-                Thread.Sleep(3000);
                 System.Diagnostics.Debug.WriteLine("Completed SLEEP THREAD");
                 
-                App.GoToLoadingScreen().Invoke();
+                App.GoToFBPage().Invoke();
 
 
             };

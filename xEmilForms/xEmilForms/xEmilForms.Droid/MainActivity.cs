@@ -64,7 +64,8 @@ namespace xEmilForms.Droid
                 .Register<IDependencyContainer>(resolverContainer)
                 .Register<ISecureStorage>(t => new KeyVaultStorage(t.Resolve<IDevice>().Id.ToCharArray()))
                 .Register<IRedditService>(t => new RedditServiceMocked())
-                .Register<IXFormsApp>(app);
+                .Register<IXFormsApp>(app)
+                .Register<IFacebookService>(t => new FacebookMockedService());
 
             //TODO ADD  IOC for interfaces 
             //.Register<IJsonSerializer, XLabs.Serialization.ServiceStack.JsonSerializer>()    

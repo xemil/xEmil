@@ -6,7 +6,7 @@
                x:Class="xEmilForms.Pages.LoadingScreenPage"
                Title="Loading Screen"
                BackgroundColor="#B455B6">
-  <StackLayout VerticalOptions="{Binding BaseLayout.VerticalOptions}" HorizontalOptions="{Binding BaseLayout.HorizontalOptions}" Opacity="{Binding BaseLayout.Opacity}" BackgroundColor="{Binding BaseLayout.BackgroundColor}">
+  <StackLayout VerticalOptions="{Binding BaseLayout.VerticalOptions}" HorizontalOptions="{Binding BaseLayout.HorizontalOptions}" Color="#3498DB" BackgroundColor="#B455B6">
     <ActivityIndicator IsRunning="true"/>
     <Label Text="Loading Data......."></Label> 
   </StackLayout>

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
@@ -10,9 +11,9 @@ namespace xEmilForms.ViewModel
     class LoadingScreenViewModel : XLabs.Forms.Mvvm.ViewModel
     {
 
-        public LoadingScreenViewModel 
+        public LoadingScreenViewModel()
         {
-            n
+            App.GoToFBPage();
         }
         
         private Boolean _isLoading;
@@ -37,7 +38,6 @@ namespace xEmilForms.ViewModel
                     VerticalOptions = LayoutOptions.CenterAndExpand,
                     HorizontalOptions = LayoutOptions.CenterAndExpand,
                     Opacity = 0.5,
-                    BackgroundColor = Color.Black
                 });
             }
             set { SetProperty(ref _baseLayout, value); }

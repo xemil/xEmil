@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="auto">
 	<uses-sdk android:minSdkVersion="19" />
 	<application android:label="xemil" android:icon="@drawable/xEmilImage850x718" android:theme="@style/MyTheme"></application>
-    <uses-permission android:name="android.permission.ACCOUNT_MANAGER" />
+	<uses-permission android:name="android.permission.ACCOUNT_MANAGER" />
 	<uses-permission android:name="android.permission.ACCESS_CHECKIN_PROPERTIES" />
 	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -34,4 +34,5 @@
 	<uses-permission android:name="android.permission.BODY_SENSORS" />
 	<uses-permission android:name="android.permission.BRICK" />
 	<uses-permission android:name="android.permission.BROADCAST_PACKAGE_REMOVED" />
+	<uses-permission android:name="android.permission.INTERNET" />
 </manifest>

@@ -14,6 +14,21 @@ namespace xEmilForms.ViewModel
 {
     class StartPageViewModel : XLabs.Forms.Mvvm.ViewModel
     {
+        private TapGestureRecognizer _logoImageGestureRecognizer;
+
+        public StartPageViewModel()
+        {
+
+            _logoImageGestureRecognizer = new TapGestureRecognizer();
+            _logoImageGestureRecognizer.Tapped += (sender, args) =>
+            {
+                System.Diagnostics.Debug.WriteLine("TAPPED");
+                var image = (Image) sender;
+                image.RotateTo(200);
+            };
+
+
+        }
 
         private ExtendedButton _loginButton;
 
@@ -45,11 +60,26 @@ namespace xEmilForms.ViewModel
             set { SetProperty(ref _loginCommand, value); }  
         }
 
+        private Image _logoImage;
 
-   
+        public Image LogoImage
+        {
 
-		
+            get { return _logoImage ?? (_logoImage = GetLogoImage()); }
+            set { SetProperty(ref _logoImage, value); }
+        }
 
+        private Image GetLogoImage()
+        {
+            var image = new Image()
+                {
+                    Source = "xEmilImage850x718.png",
+                    Aspect = Aspect.AspectFit,
+                };
+
+            image.GestureRecognizers.Add(_logoImageGestureRecognizer);
+            return image;
+        }
     }
 
 }

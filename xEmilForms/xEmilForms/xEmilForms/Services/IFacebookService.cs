@@ -12,5 +12,7 @@ namespace xEmilForms.Services
         Task SetLoggedInFacebookUserTask(FacebookUser fb);
         Task SetProfilePictureTask(FacebookUser fb);
 
+        Task SetFriendListTask(FacebookUser fb);
+
     }
 }

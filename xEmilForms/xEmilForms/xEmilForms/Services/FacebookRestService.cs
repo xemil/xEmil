@@ -64,5 +64,10 @@ namespace xEmilForms.Services
             });
             return getProfilePic;
         }
+
+        public Task SetFriendListTask(FacebookUser fb)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

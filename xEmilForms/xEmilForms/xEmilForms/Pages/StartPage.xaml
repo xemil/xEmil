@@ -27,8 +27,8 @@
                     WinPhone="20,20,20,20" />
      </ScrollView.Padding>
       <StackLayout>
-        <ContentView Padding="0, 20, 0, 0">
-          <Label Text="TEST"></Label>
+        <ContentView Padding="30, 30, 30, 30">
+          <Image Source="{Binding LogoImage.Source}" Aspect="{Binding LogoImage.Aspect}"></Image>
         </ContentView>
         <ContentView Padding="30,30,30,30" >
           <Button Text="{Binding LoginButton.Text}" Command="{Binding LoginButton.Command}" Style="{StaticResource ButtonStyle}"></Button>
