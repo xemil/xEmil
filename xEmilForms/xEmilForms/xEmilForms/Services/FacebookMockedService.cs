@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.ServiceModel;
 using System.Text;
@@ -25,7 +26,7 @@ namespace xEmilForms.Services
                 fb.Locale = "en_US";
 
             });
-            
+
             return task;
 
         }
@@ -34,9 +35,13 @@ namespace xEmilForms.Services
         {
             var task = new Task(() =>
             {
-                fb.ProfileImage = new WebImage()
+                fb.ProfileImage = new Image()
                 {
-                    ImageUrl = "http://i.imgur.com/jgAo9Z2.jpg"
+                    Source = "FloId650x447.png",
+                    Aspect = Aspect.AspectFit,
+                    HeightRequest = 200,
+                    WidthRequest = 200,
+                    
 
                 };
             });
@@ -48,19 +53,22 @@ namespace xEmilForms.Services
         {
             var task = new Task(() =>
             {
-                fb.FriendList = GetFriendList();
             });
-
+            fb.FriendList = new ObservableCollection<FacebookUser>();
+            for (int j = 0; j < 50; j++)
+            {
+                addFriend(fb.FriendList);
+            }
             return task;
         }
 
-        private List<FacebookUser> GetFriendList()
+        private ObservableCollection<FacebookUser> GetFriendList()
         {
-            var list = new List<FacebookUser>();
-
+            var list = new ObservableCollection<FacebookUser>();
+            string[] userNames;
             for (int i = 0; i < 50; i++)
             {
-                var userNames = GetUsername();
+                userNames = GetUsername();
                 var id = GetId().ToString();
                 list.Add(new FacebookUser()
                 {
@@ -81,6 +89,28 @@ namespace xEmilForms.Services
             }
             return list;
 
+        }
+
+        private void addFriend(ObservableCollection<FacebookUser> list )
+        {
+            var userNames = GetUsername();
+            var id = GetId().ToString();
+            list.Add(new FacebookUser()
+            {
+                FirstName = userNames[0],
+                LastName = userNames[1],
+                Name = userNames[2],
+                Gender = "male",
+                Locale = "en_US",
+                Id = id,
+                Link = new Uri("http://www.facebook.com/" + id),
+                ProfileImage = new Image()
+                {
+
+                    Source = "icon.png"
+                }
+
+            });            
         }
 
         private string GetProfileURL()

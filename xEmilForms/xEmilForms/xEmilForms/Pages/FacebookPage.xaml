@@ -5,11 +5,21 @@
                xmlns:controls="clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms"
                x:Class="xEmilForms.Pages.FacebookPage"
                Title="TEST"
-               BackgroundColor="Black">
-  <ActivityIndicator IsVisible="{Binding IsLoading}" IsRunning="{Binding IsLoading}"></ActivityIndicator>
+               BackgroundColor="#B455B">
+  <!--<ActivityIndicator IsVisible="{Binding IsLoading}" IsRunning="{Binding IsLoading}"></ActivityIndicator>-->
   <StackLayout>
-    <controls:WebImage ImageUrl="{Binding LoggedinFacebookUser.ProfileImage.ImageUrl}"></controls:WebImage>
-    <Label Text="{Binding LoggedinFacebookUser.FirstName}" VerticalOptions="Center" HorizontalOptions="Center"/>
-    <Label Text="{Binding LoggedinFacebookUser.Gender}" VerticalOptions="Center" HorizontalOptions="Center"/>
+    <StackLayout>
+      <Image Source="{Binding LoggedinFacebookUser.ProfileImage.Source}" HeightRequest="50" WidthRequest="50" Aspect="{Binding LoggedinFacebookUser.ProfileImage.Aspect}"></Image>
+      <Label Text="{Binding LoggedinFacebookUser.FirstName}" VerticalOptions="Center" HorizontalOptions="Center"/>
+      <Label Text="{Binding LoggedinFacebookUser.Gender}" VerticalOptions="Center" HorizontalOptions="Center"/>
+    </StackLayout>
+    <ListView ItemsSource="{Binding LoggedinFacebookUser.FriendList}">
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <TextCell Text="{Binding FirstName}"></TextCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
   </StackLayout>
+
 </mvvm:BaseView>

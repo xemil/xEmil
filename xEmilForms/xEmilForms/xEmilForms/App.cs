@@ -48,7 +48,7 @@ namespace xEmilForms
             var buttonPage = ViewFactory.CreatePage<ButtonPageViewModel, Page>() as Page;
             var startPage = ViewFactory.CreatePage<StartPageViewModel, Page>() as Page;
             var fbPage = ViewFactory.CreatePage<FacebookViewModel, Page>() as Page;
-            return startPage;
+            return fbPage;
         }
 
         private void RegisterAllVm()

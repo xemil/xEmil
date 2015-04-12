@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -67,10 +68,10 @@ namespace xEmilForms.Helpers
             set { SetProperty(ref _profileImage, value); }
         }
 
-        private List<FacebookUser> _friendList;
-        public List<FacebookUser> FriendList
+        private ObservableCollection<FacebookUser> _friendList;
+        public ObservableCollection<FacebookUser> FriendList
         {
-            get { return _friendList ?? (_friendList = new List<FacebookUser>());}
+            get { return _friendList ?? (_friendList = new ObservableCollection<FacebookUser>());}
             set { SetProperty(ref _friendList, value); }
         }
 

@@ -58,9 +58,9 @@ namespace xEmilForms.ViewModel
                 }
             };
             var fbService = Resolver.Resolve<IFacebookService>();
-            fbService.SetLoggedInFacebookUserTask(fbUser);
-            fbService.SetProfilePictureTask(fbUser);
-            fbService.SetFriendListTask(fbUser);
+            fbService.SetLoggedInFacebookUserTask(fbUser).Start();
+            fbService.SetProfilePictureTask(fbUser).Start();
+            fbService.SetFriendListTask(fbUser).Start();
             IsLoading = false;
             return fbUser;
         }
