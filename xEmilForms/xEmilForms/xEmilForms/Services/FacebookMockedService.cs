@@ -4,6 +4,7 @@ using System.Linq;
 using System.ServiceModel;
 using System.Text;
 using System.Threading.Tasks;
+using Xamarin.Forms;
 using xEmilForms.Helpers;
 using XLabs.Forms.Controls;
 
@@ -70,10 +71,10 @@ namespace xEmilForms.Services
                     Locale = "en_US",
                     Id = id,
                     Link = new Uri("http://www.facebook.com/" + id),
-                    ProfileImage = new WebImage()
+                    ProfileImage = new Image()
                     {
-                        ImageUrl = GetProfileURL(),
-                        DefaultImage = "icon.png"
+
+                        Source = "icon.png"
                     }
                     
                 });

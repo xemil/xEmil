@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Xamarin.Forms;
 using XLabs.Data;
 using XLabs.Forms.Controls;
 
@@ -59,8 +60,8 @@ namespace xEmilForms.Helpers
             set { SetProperty(ref _name, value); }
         }
 
-        private WebImage _profileImage;
-        public WebImage ProfileImage
+        private Image _profileImage;
+        public Image ProfileImage
         {
             get { return _profileImage; }
             set { SetProperty(ref _profileImage, value); }

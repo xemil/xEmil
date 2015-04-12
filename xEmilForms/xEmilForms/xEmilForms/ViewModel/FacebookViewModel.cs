@@ -52,10 +52,9 @@ namespace xEmilForms.ViewModel
             IsLoading = true;
             var fbUser = new FacebookUser()
             {
-                ProfileImage = new WebImage()
+                ProfileImage = new Image()
                 {
-                    ImageUrl = "http://i.imgur.com/aCA1WHG.jpg",
-                    DefaultImage = "icon.png"
+                    Source = "icon.png"
                 }
             };
             var fbService = Resolver.Resolve<IFacebookService>();
