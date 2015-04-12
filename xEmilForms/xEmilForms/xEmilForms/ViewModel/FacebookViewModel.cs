@@ -6,6 +6,7 @@ using System.Runtime.InteropServices;
 using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 using Xamarin.Forms;
 using xEmilForms.Helpers;
 using xEmilForms.Helpers.JSON;
@@ -64,6 +65,6 @@ namespace xEmilForms.ViewModel
             IsLoading = false;
             return fbUser;
         }
-        
+
     }
 }

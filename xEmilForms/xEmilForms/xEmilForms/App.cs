@@ -8,19 +8,18 @@ using XLabs.Forms.Mvvm;
 using XLabs.Forms.Services;
 using XLabs.Ioc;
 using XLabs.Platform.Mvvm;
+using XLabs.Platform.Services;
 
 namespace xEmilForms
 {
     public class App : Application
     {
-
         static NavigationPage _navigationPage;
-
         public App()
         {
-            // The root page of your application
             Init();
             RegisterAllVm();
+            //FIX NAVIGATIONPAGE
             var mainPage = GetMainPage();
             _navigationPage = new NavigationPage(mainPage);
             MainPage = _navigationPage;
@@ -48,7 +47,9 @@ namespace xEmilForms
             var buttonPage = ViewFactory.CreatePage<ButtonPageViewModel, Page>() as Page;
             var startPage = ViewFactory.CreatePage<StartPageViewModel, Page>() as Page;
             var fbPage = ViewFactory.CreatePage<FacebookViewModel, Page>() as Page;
-            return fbPage;
+            var rootPage = new RootPage();
+ 
+            return startPage;
         }
 
         private void RegisterAllVm()
@@ -82,7 +83,7 @@ namespace xEmilForms
         {
 
             var newPage = ViewFactory.CreatePage<LoadingScreenViewModel, Page>() as Page;
-            return new Action(() => _navigationPage.PushAsync(newPage));
+            return () => _navigationPage.PushAsync(newPage);
 
         }
 
@@ -90,14 +91,14 @@ namespace xEmilForms
         {
 
             var authPage = new FBLoginPage();
-            return new Action(() => _navigationPage.PushAsync(authPage));
+            return () => _navigationPage.PushAsync(authPage);
 
         }
 
         public static Action GoToFBPage()
         {
-            var newPage = ViewFactory.CreatePage<FacebookViewModel, Page>() as Page;
-            return new Action(() => _navigationPage.PushAsync(newPage));
+            var newPage = new RootPage();
+            return () => _navigationPage.PushAsync(newPage);
         }
     }
 

@@ -53,12 +53,12 @@ namespace xEmilForms.Services
         {
             var task = new Task(() =>
             {
+                for (int j = 0; j < 50; j++)
+                {
+                    addFriend(fb.FriendList);
+                }
             });
-            fb.FriendList = new ObservableCollection<FacebookUser>();
-            for (int j = 0; j < 50; j++)
-            {
-                addFriend(fb.FriendList);
-            }
+ 
             return task;
         }
 
@@ -106,11 +106,10 @@ namespace xEmilForms.Services
                 Link = new Uri("http://www.facebook.com/" + id),
                 ProfileImage = new Image()
                 {
-
                     Source = "icon.png"
                 }
 
-            });            
+            });
         }
 
         private string GetProfileURL()

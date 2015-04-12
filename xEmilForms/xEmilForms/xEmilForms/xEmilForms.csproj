@@ -37,6 +37,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="App.cs" />
+    <Compile Include="Cell\MenuCell.cs" />
     <Compile Include="Cell\RedditCell.cs" />
     <Compile Include="Cell\RedditCellNew.cs" />
     <Compile Include="Controls\InfiniteListView.cs" />
@@ -47,6 +48,7 @@
     <Compile Include="Helpers\JSON\RootObject.cs" />
     <Compile Include="Model\FacebookUser.cs" />
     <Compile Include="Helpers\JSON\FacebookMeResponse.cs" />
+    <Compile Include="Model\ListMenuItem.cs" />
     <Compile Include="Model\RedditPost.cs" />
     <Compile Include="Pages\ButtonPage.xaml.cs">
       <DependentUpon>ButtonPage.xaml</DependentUpon>
@@ -61,6 +63,9 @@
     <Compile Include="Pages\LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\MenuListData.cs" />
+    <Compile Include="Pages\MenuListView.cs" />
+    <Compile Include="Pages\MenuPage.cs" />
     <Compile Include="Pages\MvvmSamplePage.xaml.cs">
       <DependentUpon>MvvmSamplePage.xaml</DependentUpon>
     </Compile>
@@ -69,6 +74,10 @@
     </Compile>
     <Compile Include="Pages\RedditPostPage.xaml.cs">
       <DependentUpon>RedditPostPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\RootPage.cs" />
+    <Compile Include="Pages\SelectedUserPage.xaml.cs">
+      <DependentUpon>SelectedUserPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\StartPage.xaml.cs">
       <DependentUpon>StartPage.xaml</DependentUpon>
@@ -86,6 +95,7 @@
     <Compile Include="ViewModel\LoginViewModel.cs" />
     <Compile Include="ViewModel\MvvmSampleViewModel.cs" />
     <Compile Include="ViewModel\RedditPostViewModel.cs" />
+    <Compile Include="ViewModel\SelectedUserViewModel.cs" />
     <Compile Include="ViewModel\StartPageViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -189,6 +199,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Pages\LoadingScreenPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\SelectedUserPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>

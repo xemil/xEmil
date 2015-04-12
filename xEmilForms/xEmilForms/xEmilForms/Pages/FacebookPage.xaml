@@ -16,7 +16,7 @@
     <ListView ItemsSource="{Binding LoggedinFacebookUser.FriendList}">
       <ListView.ItemTemplate>
         <DataTemplate>
-          <TextCell Text="{Binding FirstName}"></TextCell>
+          <ImageCell Text="{Binding Name}" Detail="Click to track" ImageSource="icon.png" Command="{Binding ClickedCommand}" CommandParameter="{Binding .}"></ImageCell>
         </DataTemplate>
       </ListView.ItemTemplate>
     </ListView>

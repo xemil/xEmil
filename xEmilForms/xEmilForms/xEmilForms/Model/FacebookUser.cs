@@ -4,14 +4,17 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 using Xamarin.Forms;
 using XLabs.Data;
 using XLabs.Forms.Controls;
+using XLabs.Forms.Services;
 
 namespace xEmilForms.Helpers
 {
     public class FacebookUser : ObservableObject
     {
+
         private string _id;
         public string Id
         {
@@ -71,8 +74,25 @@ namespace xEmilForms.Helpers
         private ObservableCollection<FacebookUser> _friendList;
         public ObservableCollection<FacebookUser> FriendList
         {
-            get { return _friendList ?? (_friendList = new ObservableCollection<FacebookUser>());}
+            get { return _friendList ?? (_friendList = new ObservableCollection<FacebookUser>()); }
             set { SetProperty(ref _friendList, value); }
+        }
+
+        private Command<FacebookUser> _clickedCommand;
+
+        public Command<FacebookUser> ClickedCommand
+        {
+
+            get
+            {
+                return _clickedCommand ?? (_clickedCommand = new Command<FacebookUser>(OnImageListClick));
+            }
+            set { SetProperty(ref _clickedCommand, value); }
+        }
+
+        private void OnImageListClick(FacebookUser _commandParameter)
+        {
+            System.Diagnostics.Debug.WriteLine("CommandParameter: " + _commandParameter.LastName);
         }
 
     }
