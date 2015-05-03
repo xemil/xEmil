@@ -26,6 +26,8 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -37,9 +39,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="App.cs" />
+    <Compile Include="Cell\FacebookUserCell.cs" />
     <Compile Include="Cell\MenuCell.cs" />
     <Compile Include="Cell\RedditCell.cs" />
     <Compile Include="Cell\RedditCellNew.cs" />
+    <Compile Include="Cell\TestCell.cs" />
     <Compile Include="Controls\InfiniteListView.cs" />
     <Compile Include="Exception\NoViewException.cs" />
     <Compile Include="Helpers\ByteArrayConverter.cs" />
@@ -48,6 +52,7 @@
     <Compile Include="Helpers\JSON\RootObject.cs" />
     <Compile Include="Model\FacebookUser.cs" />
     <Compile Include="Helpers\JSON\FacebookMeResponse.cs" />
+    <Compile Include="Model\ISelectedFacebookUser.cs" />
     <Compile Include="Model\ListMenuItem.cs" />
     <Compile Include="Model\RedditPost.cs" />
     <Compile Include="Pages\ButtonPage.xaml.cs">

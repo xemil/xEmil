@@ -6,13 +6,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
+using xEmilForms.Model;
+using xEmilForms.Pages;
+using xEmilForms.ViewModel;
 using XLabs.Data;
 using XLabs.Forms.Controls;
 using XLabs.Forms.Services;
+using XLabs.Ioc;
+using XLabs.Platform.Services;
 
 namespace xEmilForms.Helpers
 {
-    public class FacebookUser : ObservableObject
+    public class FacebookUser : ObservableObject, ISelectedFacebookUser
     {
 
         private string _id;
@@ -92,7 +97,14 @@ namespace xEmilForms.Helpers
 
         private void OnImageListClick(FacebookUser _commandParameter)
         {
+            if( _commandParameter != null)
+            {
+                Resolver.Resolve<IDependencyContainer>().Register<ISelectedFacebookUser>(resolver => _commandParameter);
+            }
             System.Diagnostics.Debug.WriteLine("CommandParameter: " + _commandParameter.LastName);
+            //var navigation = Resolver.Resolve<INavigationService>();
+            //navigation.NavigateTo<SelectedUserViewModel>();
+            App.Current.MainPage = new NavigationPage(new SelectedUserPage());
         }
 
     }

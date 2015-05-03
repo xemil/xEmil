@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Threading.Tasks;
+using System.Windows.Input;
 using Xamarin.Forms;
 using xEmilForms.Pages;
 using xEmilForms.ViewModel;
@@ -22,7 +23,14 @@ namespace xEmilForms
             //FIX NAVIGATIONPAGE
             var mainPage = GetMainPage();
             _navigationPage = new NavigationPage(mainPage);
+            Resolver.Resolve<IDependencyContainer>()
+            .Register<INavigationService>(t => new NavigationService(mainPage.Navigation));
+            NavigationPage.SetHasNavigationBar(mainPage, false);
             MainPage = _navigationPage;
+
+            //SKIP INITIAL FACE
+            //GoToFBPage();
+
         }
 
         public static void Init()
@@ -48,7 +56,7 @@ namespace xEmilForms
             var startPage = ViewFactory.CreatePage<StartPageViewModel, Page>() as Page;
             var fbPage = ViewFactory.CreatePage<FacebookViewModel, Page>() as Page;
             var rootPage = new RootPage();
- 
+
             return startPage;
         }
 
@@ -61,6 +69,7 @@ namespace xEmilForms
             ViewFactory.Register<StartPage, StartPageViewModel>();
             ViewFactory.Register<FBLoginPage, FBLoginPageViewModel>();
             ViewFactory.Register<LoadingScreenPage, LoadingScreenViewModel>();
+            ViewFactory.Register<SelectedUserPage, SelectedUserViewModel>();
 
         }
 
@@ -91,14 +100,17 @@ namespace xEmilForms
         {
 
             var authPage = new FBLoginPage();
+            NavigationPage.SetHasNavigationBar(authPage, false);
             return () => _navigationPage.PushAsync(authPage);
 
         }
 
-        public static Action GoToFBPage()
+        public static void GoToFBPage()
         {
             var newPage = new RootPage();
-            return () => _navigationPage.PushAsync(newPage);
+            Resolver.Resolve<IDependencyContainer>()
+            .Register<INavigationService>(t => new NavigationService(newPage.Navigation));
+            Current.MainPage = newPage;
         }
     }
 

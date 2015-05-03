@@ -41,7 +41,7 @@ namespace xEmilForms.Services
                     Aspect = Aspect.AspectFit,
                     HeightRequest = 200,
                     WidthRequest = 200,
-                    
+
 
                 };
             });
@@ -51,47 +51,132 @@ namespace xEmilForms.Services
 
         public Task SetFriendListTask(FacebookUser fb)
         {
+
             var task = new Task(() =>
             {
-                for (int j = 0; j < 50; j++)
-                {
-                    addFriend(fb.FriendList);
-                }
+
+                var friendList = GetFriendList();
+
+                fb.FriendList = friendList;
+
             });
- 
+            
             return task;
         }
 
         private ObservableCollection<FacebookUser> GetFriendList()
         {
-            var list = new ObservableCollection<FacebookUser>();
-            string[] userNames;
-            for (int i = 0; i < 50; i++)
-            {
-                userNames = GetUsername();
-                var id = GetId().ToString();
-                list.Add(new FacebookUser()
-                {
-                    FirstName = userNames[0],
-                    LastName = userNames[1],
-                    Name = userNames[2],
-                    Gender = "male",
-                    Locale = "en_US",
-                    Id = id,
-                    Link = new Uri("http://www.facebook.com/" + id),
-                    ProfileImage = new Image()
-                    {
+            //var list = new ObservableCollection<FacebookUser>();
+            //string[] userNames;
+            //for (int i = 0; i < 50; i++)
+            //{
+            //    userNames = GetUsername();
+            //    var id = GetId().ToString();
+            //    list.Add(new FacebookUser()
+            //    {
+            //        FirstName = userNames[0],
+            //        LastName = userNames[1],
+            //        Name = userNames[2],
+            //        Gender = "male",
+            //        Locale = "en_US",
+            //        Id = id,
+            //        Link = new Uri("http://www.facebook.com/" + id),
+            //        ProfileImage = new Image()
+            //        {
 
-                        Source = "icon.png"
-                    }
+            //            Source = "icon.png"
+            //        }
                     
-                });
-            }
+            //    });
+            //}
+
+            var list = new ObservableCollection<FacebookUser>();
+            var id1 = GetId();
+            var fb1 = new FacebookUser()
+            {
+                FirstName = "Anna",
+                LastName = "Svensson",
+                Name = "Anna Svensson",
+                Gender = "female",
+                Locale = "en_US",
+                Id = id1.ToString(),
+                Link = new Uri("http://www.facebook.com/" + id1),
+                ProfileImage = new Image()
+                {
+                    Source =
+                        "icon.png"
+                }
+            };
+            
+            list.Add(fb1);
+
+
+            var id2 = GetId();
+            var fb2 = new FacebookUser()
+            {
+                FirstName = "Erik",
+                LastName = "Andersson",
+                Name = "Erik Andersson",
+                Gender = "male",
+                Locale = "en_US",
+                Id = id1.ToString(),
+                Link = new Uri("http://www.facebook.com/" + id1),
+                ProfileImage = new Image()
+                {
+                    Source =
+                        "icon.png"
+                }
+            };
+
+            list.Add(fb2);
+
+
+            var id3 = GetId();
+            var fb3 = new FacebookUser()
+            {
+                FirstName = "Pelle",
+                LastName = "Jönsson",
+                Name = "Pelle Jönsson",
+                Gender = "male",
+                Locale = "en_US",
+                Id = id1.ToString(),
+                Link = new Uri("http://www.facebook.com/" + id1),
+                ProfileImage = new Image()
+                {
+                    Source =
+                        "icon.png"
+                }
+            };
+
+            list.Add(fb3);
+
+
+
+            var id4 = GetId();
+            var fb4 = new FacebookUser()
+            {
+                FirstName = "Eva",
+                LastName = "Svanberg",
+                Name = "Eva Svanberg",
+                Gender = "female",
+                Locale = "en_US",
+                Id = id1.ToString(),
+                Link = new Uri("http://www.facebook.com/" + id1),
+                ProfileImage = new Image()
+                {
+                    Source =
+                        "icon.png"
+                }
+            };
+
+            list.Add(fb4);
+
+            
             return list;
 
         }
 
-        private void addFriend(ObservableCollection<FacebookUser> list )
+        private void addFriend(ObservableCollection<FacebookUser> list)
         {
             var userNames = GetUsername();
             var id = GetId().ToString();

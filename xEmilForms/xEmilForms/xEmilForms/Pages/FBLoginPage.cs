@@ -9,5 +9,9 @@ namespace xEmilForms.Pages
 {
     public class FBLoginPage : XLabs.Forms.Mvvm.BaseView
     {
+        public FBLoginPage()
+        {
+            NavigationPage.SetHasNavigationBar(this, false);
+        }
     }
 }

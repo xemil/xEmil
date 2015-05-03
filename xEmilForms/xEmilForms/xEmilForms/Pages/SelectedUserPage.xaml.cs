@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using Xamarin.Forms;
+using xEmilForms.Helpers;
 using xEmilForms.ViewModel;
 
 namespace xEmilForms.Pages

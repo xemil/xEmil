@@ -120,6 +120,7 @@
     <AndroidResource Include="Resources\drawable\mellon.png" />
     <AndroidResource Include="Resources\drawable\pear.png" />
     <AndroidResource Include="Resources\drawable\settings.png" />
+    <AndroidResource Include="Resources\drawable\ic_action_next_item.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Xamarin-Forms-Labs\src\Forms\XLabs.Forms.Droid\XLabs.Forms.Droid.csproj">

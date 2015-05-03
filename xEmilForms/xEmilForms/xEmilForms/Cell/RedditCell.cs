@@ -6,14 +6,25 @@ namespace xEmilForms.Cell
     {
         public RedditCell()
         {
-            var image = new Image();
-            image.SetBinding(Image.SourceProperty, new Binding("ImageUri"));
+            
+            var image = new Image()
+            {
+                Source = "icon.png",
+                VerticalOptions = LayoutOptions.Start,
+                HorizontalOptions = LayoutOptions.Center
+    
+            };
+
+            //image.SetBinding(Image.SourceProperty, new Binding("ImageUri"));
             StackLayout headerLayout = CreateHeaderLayout();
             View = new StackLayout
             {
                 VerticalOptions = LayoutOptions.FillAndExpand,
                 HorizontalOptions = LayoutOptions.FillAndExpand,
-                Children = {image, headerLayout}
+                Children =
+                {
+                  image, headerLayout
+                }
             };
         }
 
@@ -21,11 +32,12 @@ namespace xEmilForms.Cell
         {
             var headerLabel = new Label
             {
+                Text = "test",
                 HorizontalOptions = LayoutOptions.FillAndExpand,
                 VerticalOptions = LayoutOptions.Start,
                 FontSize = 10
             };
-            headerLabel.SetBinding(Label.TextProperty, "Header");
+            //headerLabel.SetBinding(Label.TextProperty, "Header");
 
 
             var descriptionLabel = new Label

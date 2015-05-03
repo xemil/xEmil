@@ -21,7 +21,7 @@ namespace xEmilForms.Pages
             ItemsSource = data;
             VerticalOptions = LayoutOptions.FillAndExpand;
             BackgroundColor = Color.Transparent;
-            SeparatorVisibility = SeparatorVisibility.None;
+            SeparatorVisibility = SeparatorVisibility.Default;
             var cell = new DataTemplate(typeof(MenuCell));
             cell.SetBinding(MenuCell.TextProperty, "Title");
             cell.SetBinding(MenuCell.ImageSourceProperty, "IconSource");

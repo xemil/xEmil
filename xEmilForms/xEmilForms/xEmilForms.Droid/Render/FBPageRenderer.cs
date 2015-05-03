@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading;
 using Android.App;
 using Android.Content;
+using Android.Content.Res;
 using Android.OS;
 using Android.Runtime;
 using Android.Views;
@@ -30,14 +31,14 @@ namespace xEmilForms.Droid.Render
     {
         protected override void OnElementChanged(ElementChangedEventArgs<Page> e)
         {
+
             base.OnElementChanged(e);
-             var auth = new OAuth2Authenticator(
+            var auth = new OAuth2Authenticator(
                 clientId: "428095124009332",
                 scope: "email, user_friends",
                 authorizeUrl: new Uri("https://m.facebook.com/dialog/oauth/"),
                 redirectUrl: new Uri("http://www.facebook.com/connect/login_success.html")
                 );
-
 
             var intent = auth.GetUI(this.Context);
             var activity = this.Context as Activity;
@@ -64,10 +65,7 @@ namespace xEmilForms.Droid.Render
                 }
                 System.Diagnostics.Debug.WriteLine("STARTING SLEEP THREAD");
                 System.Diagnostics.Debug.WriteLine("Completed SLEEP THREAD");
-                
-                App.GoToFBPage().Invoke();
-
-
+                App.GoToFBPage();
             };
             
         }

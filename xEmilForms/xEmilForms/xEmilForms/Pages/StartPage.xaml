@@ -27,7 +27,7 @@
                     WinPhone="20,20,20,20" />
      </ScrollView.Padding>
       <StackLayout>
-        <ContentView Padding="30, 30, 30, 30">
+        <ContentView Padding="30, 100, 30, 30">
           <Image Source="{Binding LogoImage.Source}" Aspect="{Binding LogoImage.Aspect}"></Image>
         </ContentView>
         <ContentView Padding="30,30,30,30" >

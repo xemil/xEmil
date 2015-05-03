@@ -16,7 +16,6 @@ namespace xEmilForms.Pages
             Icon = "settings.png";
             Title = "menu"; // The Title property must be set.
             BackgroundColor = Color.FromHex("333333");
-
             Menu = new MenuListView();
 
             var menuLabel = new ContentView
@@ -31,7 +30,7 @@ namespace xEmilForms.Pages
 
             var layout = new StackLayout
             {
-                Spacing = 0,
+                Spacing = 5,
                 VerticalOptions = LayoutOptions.FillAndExpand
             };
             layout.Children.Add(menuLabel);

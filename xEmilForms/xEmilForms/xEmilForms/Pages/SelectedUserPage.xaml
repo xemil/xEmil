@@ -8,6 +8,8 @@
                BackgroundColor="#B455B6">
   <StackLayout>
     <Label Text="123"></Label>
+    <Label Text="{Binding Lng}"></Label>
+    <Label Text="{Binding Lat}"></Label>
   </StackLayout>
 
 </mvvm:BaseView>

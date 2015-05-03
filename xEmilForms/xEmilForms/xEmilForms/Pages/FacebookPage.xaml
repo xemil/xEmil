@@ -3,20 +3,22 @@
                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                xmlns:mvvm="clr-namespace:XLabs.Forms.Mvvm;assembly=XLabs.Forms"
                xmlns:controls="clr-namespace:XLabs.Forms.Controls;assembly=XLabs.Forms"
+               xmlns:viewcell="clr-namespace:xEmilForms.Cell;assembly=xEmilForms"
                x:Class="xEmilForms.Pages.FacebookPage"
-               Title="TEST"
-               BackgroundColor="#B455B">
+               Title="Facebook View"
+               BackgroundColor="White">
   <!--<ActivityIndicator IsVisible="{Binding IsLoading}" IsRunning="{Binding IsLoading}"></ActivityIndicator>-->
   <StackLayout>
-    <StackLayout>
+    <!--<StackLayout>
       <Image Source="{Binding LoggedinFacebookUser.ProfileImage.Source}" HeightRequest="50" WidthRequest="50" Aspect="{Binding LoggedinFacebookUser.ProfileImage.Aspect}"></Image>
       <Label Text="{Binding LoggedinFacebookUser.FirstName}" VerticalOptions="Center" HorizontalOptions="Center"/>
       <Label Text="{Binding LoggedinFacebookUser.Gender}" VerticalOptions="Center" HorizontalOptions="Center"/>
-    </StackLayout>
-    <ListView ItemsSource="{Binding LoggedinFacebookUser.FriendList}">
+    </StackLayout>-->
+    <SearchBar Text="Search"></SearchBar>
+    <ListView ItemsSource="{Binding LoggedinFacebookUser.FriendList}" HasUnevenRows="true">
       <ListView.ItemTemplate>
         <DataTemplate>
-          <ImageCell Text="{Binding Name}" Detail="Click to track" ImageSource="icon.png" Command="{Binding ClickedCommand}" CommandParameter="{Binding .}"></ImageCell>
+          <viewcell:FacebookUserCell></viewcell:FacebookUserCell>
         </DataTemplate>
       </ListView.ItemTemplate>
     </ListView>

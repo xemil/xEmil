@@ -18,7 +18,10 @@ namespace xEmilForms.Pages
         {
             menuPage = new MenuPage();
             menuPage.Menu.ItemSelected += (sender, e) => NavigateTo(e.SelectedItem as ListMenuItem);
-            RootNavigationPage = new NavigationPage(ViewFactory.CreatePage<FacebookViewModel, Page>() as Page);
+            RootNavigationPage = new NavigationPage(ViewFactory.CreatePage<FacebookViewModel, Page>() as Page)
+            {
+                BarBackgroundColor = Color.FromHex("#B455B6"),
+            };
             Master = menuPage;
             Detail = RootNavigationPage;
         }

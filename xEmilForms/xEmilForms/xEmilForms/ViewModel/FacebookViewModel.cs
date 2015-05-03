@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
+using xEmilForms.Cell;
 using xEmilForms.Helpers;
 using xEmilForms.Helpers.JSON;
 using xEmilForms.Model;
@@ -48,6 +49,12 @@ namespace xEmilForms.ViewModel
             get { return _loggedinFacebookUser ?? (_loggedinFacebookUser = GetLoggedInFbUser().Result); }
             set { SetProperty(ref _loggedinFacebookUser, value); }
         }
+
+        public SearchBar SearchBar = new SearchBar()
+        {
+
+        };
+
         private async Task<FacebookUser> GetLoggedInFbUser()
         {
             IsLoading = true;

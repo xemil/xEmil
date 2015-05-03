@@ -9,7 +9,7 @@ using xEmilForms.Services;
     using XLabs.Ioc;
     using XLabs.Platform.Device;
     using XLabs.Platform.Mvvm;
-
+using XLabs.Platform.Services.Geolocation;
 
 
 namespace xEmilForms.Droid
@@ -65,7 +65,8 @@ namespace xEmilForms.Droid
                 .Register<ISecureStorage>(t => new KeyVaultStorage(t.Resolve<IDevice>().Id.ToCharArray()))
                 .Register<IRedditService>(t => new RedditServiceMocked())
                 .Register<IXFormsApp>(app)
-                .Register<IFacebookService>(t => new FacebookMockedService());
+                .Register<IFacebookService>(t => new FacebookMockedService())
+                .Register<IGeolocator>(t => new Geolocator());
 
             //TODO ADD  IOC for interfaces 
             //.Register<IJsonSerializer, XLabs.Serialization.ServiceStack.JsonSerializer>()    

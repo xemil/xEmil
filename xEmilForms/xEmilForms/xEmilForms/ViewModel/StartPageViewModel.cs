@@ -80,6 +80,7 @@ namespace xEmilForms.ViewModel
             image.GestureRecognizers.Add(_logoImageGestureRecognizer);
             return image;
         }
+
     }
 
 }
