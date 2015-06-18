@@ -5,6 +5,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using Xamarin.Forms;
 using xEmilForms.Helpers;
 using xEmilForms.Model;
 using XLabs.Ioc;
@@ -16,7 +17,17 @@ namespace xEmilForms.ViewModel
     class SelectedUserViewModel : XLabs.Forms.Mvvm.ViewModel
     {
 
+        private CancellationTokenSource _cancellationTokenSource;
 
+        private IGeolocator _geolocator;
+
+        public IGeolocator Geolocator
+        {
+
+            get { return _geolocator ?? (_geolocator = DependencyService.Get<IGeolocator>()); }
+         
+        }
+    
         public SelectedUserViewModel()
         {
             //var selectedUser = Resolver.Resolve<ISelectedFacebookUser>();
@@ -59,22 +70,16 @@ namespace xEmilForms.ViewModel
             set { SetProperty(ref _lng, value); }
         }
 
-        private Task SetGpsValuesTask()
+        private async Task SetGpsValuesTask()
         {
-          
-                Lat = "Started";
-                Lng = "Started";
-                var geo = Resolver.Resolve<IGeolocator>();
-            var i = 0;
-                var av = geo.IsGeolocationAvailable;
-                var ab = geo.IsGeolocationEnabled;
-            var task = geo.GetPositionAsync(new CancellationToken()).ContinueWith(task1 =>
+           _cancellationTokenSource = new CancellationTokenSource(); 
+            
+            await 
+            Geolocator.GetPositionAsync(10000, _cancellationTokenSource.Token, true).ContinueWith(task1 =>
             {
                 Lat = task1.Result.Latitude.ToString();
                 Lng = task1.Result.Longitude.ToString();
             });
-
-            return task;
         }
 
 
