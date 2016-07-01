@@ -124,40 +124,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Xamarin-Forms-Labs\src\Forms\XLabs.Forms\XLabs.Forms.csproj">
-      <Project>{dc0bdd11-9352-44e4-bceb-8ae56794bb41}</Project>
-      <Name>XLabs.Forms</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\Xamarin-Forms-Labs\src\IOC\XLabs.Ioc\XLabs.Ioc.csproj">
-      <Project>{2e200799-1170-49bf-a4aa-2a9228f8a213}</Project>
-      <Name>XLabs.Ioc</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\Xamarin-Forms-Labs\src\Platform\XLabs.Platform\XLabs.Platform.csproj">
-      <Project>{2a4d9dd4-326c-4824-aa3c-a9ed45cc898c}</Project>
-      <Name>XLabs.Platform</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\Xamarin-Forms-Labs\src\Serialization\JsonNET\XLabs.Serialization.JsonNET.csproj">
-      <Project>{fce4e482-0df8-43ac-b574-8aaf74770d1c}</Project>
-      <Name>XLabs.Serialization.JsonNET</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\Xamarin-Forms-Labs\src\Serialization\XLabs.Serialization\XLabs.Serialization.csproj">
-      <Project>{8E7F7522-F018-466A-AA8A-147EE9341BA0}</Project>
-      <Name>XLabs.Serialization</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\Xamarin-Forms-Labs\src\Web\XLabs.Web\XLabs.Web.csproj">
-      <Project>{d66d0e8a-4350-4f95-90f8-86f2fb1a45a3}</Project>
-      <Name>XLabs.Web</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\Xamarin-Forms-Labs\src\Web\XLabs.Web\XLabs.Web.PortableClient.csproj">
-      <Project>{208E60B3-2771-4D94-9523-1C612592D891}</Project>
-      <Name>XLabs.Web.PortableClient</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\Xamarin-Forms-Labs\src\XLabs.Core\XLabs.Core.csproj">
-      <Project>{15d9c404-f7e2-49f0-acc9-63c4c008c860}</Project>
-      <Name>XLabs.Core</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Pages\MvvmSamplePage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

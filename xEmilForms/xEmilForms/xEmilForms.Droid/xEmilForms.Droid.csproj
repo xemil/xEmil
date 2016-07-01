@@ -124,38 +124,6 @@
     <AndroidResource Include="Resources\drawable\ic_action_next_item.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Xamarin-Forms-Labs\src\Forms\XLabs.Forms.Droid\XLabs.Forms.Droid.csproj">
-      <Project>{e11e6ab0-2d1d-4b50-a835-7c6b342797ef}</Project>
-      <Name>XLabs.Forms.Droid</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\Xamarin-Forms-Labs\src\Forms\XLabs.Forms\XLabs.Forms.csproj">
-      <Project>{dc0bdd11-9352-44e4-bceb-8ae56794bb41}</Project>
-      <Name>XLabs.Forms</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\Xamarin-Forms-Labs\src\IOC\XLabs.Ioc\XLabs.Ioc.csproj">
-      <Project>{2e200799-1170-49bf-a4aa-2a9228f8a213}</Project>
-      <Name>XLabs.Ioc</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\Xamarin-Forms-Labs\src\Platform\XLabs.Platform.Droid\XLabs.Platform.Droid.csproj">
-      <Project>{f422fd34-e431-4758-a981-03552a7bcf13}</Project>
-      <Name>XLabs.Platform.Droid</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\Xamarin-Forms-Labs\src\Platform\XLabs.Platform\XLabs.Platform.csproj">
-      <Project>{2a4d9dd4-326c-4824-aa3c-a9ed45cc898c}</Project>
-      <Name>XLabs.Platform</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\Xamarin-Forms-Labs\src\Web\XLabs.Web\XLabs.Web.csproj">
-      <Project>{d66d0e8a-4350-4f95-90f8-86f2fb1a45a3}</Project>
-      <Name>XLabs.Web</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\Xamarin-Forms-Labs\src\Web\XLabs.Web\XLabs.Web.Droid.csproj">
-      <Project>{2e1d51ed-2850-4c22-94f9-73f11b7864b9}</Project>
-      <Name>XLabs.Web.Droid</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\Xamarin-Forms-Labs\src\XLabs.Core\XLabs.Core.csproj">
-      <Project>{15d9c404-f7e2-49f0-acc9-63c4c008c860}</Project>
-      <Name>XLabs.Core</Name>
-    </ProjectReference>
     <ProjectReference Include="..\xEmilForms\xEmilForms.csproj">
       <Project>{7bc0bc68-7bb0-44c6-9f14-2d71481a44bf}</Project>
       <Name>xEmilForms</Name>

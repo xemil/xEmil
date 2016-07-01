@@ -54,14 +54,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Xamarin-Forms-Labs\src\Forms\XLabs.Forms\XLabs.Forms.csproj">
-      <Project>{DC0BDD11-9352-44E4-BCEB-8AE56794BB41}</Project>
-      <Name>XLabs.Forms</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Xamarin-Forms-Labs\src\XLabs.Core\XLabs.Core.csproj">
-      <Project>{15D9C404-F7E2-49F0-ACC9-63C4C008C860}</Project>
-      <Name>XLabs.Core</Name>
-    </ProjectReference>
     <ProjectReference Include="..\xEmilForms\xEmilForms\xEmilForms.csproj">
       <Project>{7bc0bc68-7bb0-44c6-9f14-2d71481a44bf}</Project>
       <Name>xEmilForms</Name>
