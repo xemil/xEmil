@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+               xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+
+             
+               x:Class="xEmilForms.Pages.SelectedUserPage"
+               Title="Loading Screen"
+               BackgroundColor="#B455B6">
+  <StackLayout>
+    <Label Text="123"></Label>
+    <Label Text="{Binding Lng}"></Label>
+    <Label Text="{Binding Lat}"></Label>
+  </StackLayout>
+
+</ContentPage>
