@@ -11,12 +11,12 @@ namespace xEmilForms.Views
         
         private void MyListView_OnItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            //throw new System.NotImplementedException();
+            ((ListView)sender).SelectedItem = null;
         }
 
         private void MyListView_OnItemTapped(object sender, ItemTappedEventArgs e)
         {
-            //throw new System.NotImplementedException();
+            ((ListView)sender).SelectedItem = null;
         }
     }
 }

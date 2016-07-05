@@ -14,7 +14,7 @@ namespace xEmilForms
 
         protected override void RegisterTypes()
         {
-            Container.RegisterTypeForNavigation<MainPage>();
+            Container.RegisterTypeForNavigation<ScrollPage>();
         }
     }
 }

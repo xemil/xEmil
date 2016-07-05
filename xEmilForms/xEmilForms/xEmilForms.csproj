@@ -36,15 +36,23 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="DataTemplateSelector.cs" />
+    <Compile Include="Helpers\UrlHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ViewCells\xImageCell.xaml.cs">
-      <DependentUpon>xImageCell.xaml</DependentUpon>
+    <Compile Include="ViewCells\GridCell.xaml.cs">
+      <DependentUpon>GridCell.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ViewCells\OtherCell.xaml.cs">
-      <DependentUpon>OtherCell.xaml</DependentUpon>
+    <Compile Include="ViewCells\ImagePostCell.xaml.cs">
+      <DependentUpon>ImagePostCell.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ViewCells\ThirdDefaultCell.xaml.cs">
+      <DependentUpon>ThirdDefaultCell.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\CellData.cs" />
     <Compile Include="ViewModels\MainPageViewModel.cs" />
     <Compile Include="ViewModels\ScrollPageViewModel.cs" />
+    <Compile Include="Views\HeartView.xaml.cs">
+      <DependentUpon>HeartView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\ScrollPage.xaml.cs">
       <DependentUpon>ScrollPage.xaml</DependentUpon>
     </Compile>
@@ -111,13 +119,25 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="ViewCells\xImageCell.xaml">
+    <EmbeddedResource Include="ViewCells\GridCell.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="ViewCells\OtherCell.xaml">
+    <EmbeddedResource Include="ViewCells\ImagePostCell.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ViewCells\ThirdDefaultCell.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\HeartView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

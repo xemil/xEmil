@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ViewCell xmlns="http://xamarin.com/schemas/2014/forms"
+          xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+          x:Class="xEmilForms.ViewCells.GridCell">
+    <Grid
+        RowSpacing="10"
+        ColumnSpacing="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="100" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="100" />
+        </Grid.ColumnDefinitions>
+
+        <Label
+            Text="Autosized cell"
+            TextColor="White"
+            BackgroundColor="Blue"
+            Grid.Row="0" Grid.Column="0" />
+
+        <BoxView
+            Color="Silver"
+            HeightRequest="0"
+            Grid.Row="0" Grid.Column="1" />
+
+        <BoxView
+            Color="Teal"
+            Grid.Row="1" Grid.Column="0" />
+
+        <Label
+            Text="Leftover space"
+            TextColor="Purple"
+            BackgroundColor="Aqua"
+            XAlign="Center"
+            YAlign="Center"
+            Grid.Row="1" Grid.Column="1" />
+
+        <Label
+            Text="Span two rows (or more if you want)"
+            TextColor="Yellow"
+            BackgroundColor="Blue"
+            XAlign="Center"
+            YAlign="Center"
+            Grid.Row="0" Grid.Column="2" Grid.RowSpan="2" />
+
+        <Label
+            Text="Span two columns"
+            TextColor="Blue"
+            BackgroundColor="Yellow"
+            XAlign="Center"
+            YAlign="Center"
+            Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" />
+
+        <Label Text="Fixed 100x100"
+               TextColor="Aqua"
+               BackgroundColor="Red"
+               XAlign="Center"
+               YAlign="Center"
+               Grid.Row="2" Grid.Column="2" />
+
+    </Grid>
+
+    <Grid
+        RowSpacing="10"
+        ColumnSpacing="10">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="100" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="100" />
+        </Grid.ColumnDefinitions>
+
+        <Label
+            Text="Autosized cell"
+            TextColor="White"
+            BackgroundColor="Blue"
+            Grid.Row="0" Grid.Column="0" />
+
+        <BoxView
+            Color="Silver"
+            HeightRequest="0"
+            Grid.Row="0" Grid.Column="1" />
+
+        <BoxView
+            Color="Teal"
+            Grid.Row="1" Grid.Column="0" />
+
+        <Label
+            Text="Leftover space"
+            TextColor="Purple"
+            BackgroundColor="Aqua"
+            XAlign="Center"
+            YAlign="Center"
+            Grid.Row="1" Grid.Column="1" />
+
+        <Label
+            Text="Span two rows (or more if you want)"
+            TextColor="Yellow"
+            BackgroundColor="Blue"
+            XAlign="Center"
+            YAlign="Center"
+            Grid.Row="0" Grid.Column="2" Grid.RowSpan="2" />
+
+        <Label
+            Text="Span two columns"
+            TextColor="Blue"
+            BackgroundColor="Yellow"
+            XAlign="Center"
+            YAlign="Center"
+            Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" />
+
+        <Label Text="Fixed 100x100"
+               TextColor="Aqua"
+               BackgroundColor="Red"
+               XAlign="Center"
+               YAlign="Center"
+               Grid.Row="2" Grid.Column="2" />
+    </Grid>
+
+
+</ViewCell>

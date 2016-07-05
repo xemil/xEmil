@@ -4,6 +4,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
              xmlns:local="clr-namespace:xEmilForms"
+             xmlns:views="clr-namespace:xEmilForms.Views;assembly=xEmilForms"
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="xEmilForms.Views.ScrollPage">
   <ContentPage.Resources>
@@ -11,8 +12,7 @@
       <local:DataTemplateSelector x:Key="DataTemplateSelector"></local:DataTemplateSelector>
     </ResourceDictionary>
   </ContentPage.Resources>
-  <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
-    <Label Text="Im here"></Label>
+  <AbsoluteLayout>
     <ListView x:Name="MessagesListView"
           ItemTemplate="{StaticResource DataTemplateSelector}"
           ItemsSource="{Binding CellDataList}"
@@ -20,9 +20,12 @@
           ItemSelected="MyListView_OnItemSelected"
           ItemTapped="MyListView_OnItemTapped"
           SeparatorVisibility="None"
-          RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=1,Constant=0}">
+          AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All">
     </ListView>
-  </StackLayout>
 
-
+    <views:HeartView
+      AbsoluteLayout.LayoutBounds="0.5,0.5,0.5,0.5" AbsoluteLayout.LayoutFlags="All">
+      
+    </views:HeartView>
+  </AbsoluteLayout>
 </ContentPage>
