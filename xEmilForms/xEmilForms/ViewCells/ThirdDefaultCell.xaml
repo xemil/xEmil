@@ -2,73 +2,80 @@
 
 <ViewCell xmlns="http://xamarin.com/schemas/2014/forms"
           xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-          x:Class="xEmilForms.ViewCells.ThirdDefaultCell">
-    <Grid IsClippedToBounds="true" RowSpacing="3">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="70" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="10" />
-        </Grid.RowDefinitions>
-
-        <!--Profile Header-->
-        <StackLayout Orientation="Horizontal" Grid.Row="0">
-            <Image Source="http://www.thepurringtonpost.com/wp-content/uploads/2015/11/greycat-180x180.jpg"
-                   HeightRequest="40" WidthRequest="40"
-                   HorizontalOptions="Center" Margin="15,15,5,15" />
-            <StackLayout Orientation="Vertical">
-                <Label Text="Emil Apelgren" VerticalOptions="Start" FontSize="Small" HorizontalOptions="Start"
-                       Margin="0,15,0,0" FontAttributes="Bold" />
-                <Label Text="23 Juni 1989" VerticalOptions="Start" FontSize="Micro" HorizontalOptions="Start"
-                       TextColor="Gray" />
-            </StackLayout>
-        </StackLayout>
-
-        <!--Post Text-->
-        <Label Grid.Row="1" Text="Emil gillar katter :) #asdasdsad #erwgrrtgrtgrtg #asdasd #ghhghjghjh"
-               FontSize="Small" Margin="15,0,15,0" />
-
-        <!--Main Image-->
-        <Image Grid.Row="2" Source="{Binding ImageUrl}" Aspect="AspectFit"
-               HorizontalOptions="CenterAndExpand" HeightRequest="200" />
-
-        <!--Likes And Comments Data-->
-        <Grid Grid.Row="3">
+          xmlns:views="clr-namespace:xEmilForms.Views;assembly=xEmilForms"
+          x:Class="xEmilForms.ViewCells.ThirdDefaultCell"
+          >
+    <AbsoluteLayout>
+        <Grid IsClippedToBounds="true" RowSpacing="3"
+            AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All">
             <Grid.RowDefinitions>
-                <RowDefinition Height="20" />
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="0.5*" />
-                <ColumnDefinition Width="0.5*" />
-            </Grid.ColumnDefinitions>
-            <StackLayout Orientation="Horizontal" Grid.Column="0" Grid.Row="0" HorizontalOptions="Start"
-                         VerticalOptions="CenterAndExpand">
-                <Image Source="http://c1.jalbum.net/res/donator_10px.png?t=18"
-                       HeightRequest="10" WidthRequest="10" Aspect="AspectFill" Margin="20,5,0,5" />
-                <Label Text="15" FontSize="Micro" VerticalOptions="Center" />
-            </StackLayout>
-            <Label Grid.Row="0" Grid.Column="1" Text="15 Comments" FontSize="Micro" Margin="0,5,20,5"
-                   HorizontalOptions="End" />
-        </Grid>
-
-        <!--Share and comment buttons-->
-        <Grid Grid.Row="4">
-            <Grid.RowDefinitions>
+                <RowDefinition Height="70" />
                 <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="10" />
             </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="0.33*" />
-                <ColumnDefinition Width="0.34*" />
-                <ColumnDefinition Width="0.33*" />
-            </Grid.ColumnDefinitions>
-            <Button Grid.Column="0" Text="Heart" Image="{Binding LikedButtonImageUrl}"
-                    Command="{Binding HeartButtonClickedCommand}" />
-            <Button Grid.Column="1" Text="Comment" />
-            <Button Grid.Column="2" Text="Share" />
-        </Grid>
 
-        <BoxView Grid.Row="5" Color="Gray" HeightRequest="10" MinimumWidthRequest="300" />
-    </Grid>
+            <!--Profile Header-->
+            <StackLayout Orientation="Horizontal" Grid.Row="0">
+                <Image Source="http://www.thepurringtonpost.com/wp-content/uploads/2015/11/greycat-180x180.jpg"
+                       HeightRequest="40" WidthRequest="40"
+                       HorizontalOptions="Center" Margin="15,15,5,15" />
+                <StackLayout Orientation="Vertical">
+                    <Label Text="Emil Apelgren" VerticalOptions="Start" FontSize="Small" HorizontalOptions="Start"
+                           Margin="0,15,0,0" FontAttributes="Bold" />
+                    <Label Text="23 Juni 1989" VerticalOptions="Start" FontSize="Micro" HorizontalOptions="Start"
+                           TextColor="Gray" />
+                </StackLayout>
+            </StackLayout>
+
+            <!--Post Text-->
+            <Label Grid.Row="1" Text="Emil gillar katter :) #asdasdsad #erwgrrtgrtgrtg #asdasd #ghhghjghjh"
+                   FontSize="Small" Margin="15,0,15,0" />
+
+            <!--Main Image-->
+            <Image Grid.Row="2" Source="{Binding ImageUrl}" Aspect="AspectFit"
+                   HorizontalOptions="CenterAndExpand" HeightRequest="200" />
+
+            <!--Likes And Comments Data-->
+            <Grid Grid.Row="3">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="20" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.5*" />
+                    <ColumnDefinition Width="0.5*" />
+                </Grid.ColumnDefinitions>
+                <StackLayout Orientation="Horizontal" Grid.Column="0" Grid.Row="0" HorizontalOptions="Start"
+                             VerticalOptions="CenterAndExpand">
+                    <Image Source="http://c1.jalbum.net/res/donator_10px.png?t=18"
+                           HeightRequest="10" WidthRequest="10" Aspect="AspectFill" Margin="20,5,0,5" />
+                    <Label Text="15" FontSize="Micro" VerticalOptions="Center" />
+                </StackLayout>
+                <Label Grid.Row="0" Grid.Column="1" Text="15 Comments" FontSize="Micro" Margin="0,5,20,5"
+                       HorizontalOptions="End" />
+            </Grid>
+
+            <!--Share and comment buttons-->
+            <Grid Grid.Row="4">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.33*" />
+                    <ColumnDefinition Width="0.34*" />
+                    <ColumnDefinition Width="0.33*" />
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" Text="Heart" Image="{Binding LikedButtonImageUrl}"
+                        Command="{Binding HeartButtonClickedCommand}" />
+                <Button Grid.Column="1" Text="Comment" />
+                <Button Grid.Column="2" Text="Share" />
+            </Grid>
+
+            <BoxView Grid.Row="5" Color="Gray" HeightRequest="10" MinimumWidthRequest="300" />
+        </Grid>
+        <views:HeartView x:Name="HeartView" ClassId="{Binding PostId}"
+            AbsoluteLayout.LayoutBounds="0.5,0.5,0.5,0.5" AbsoluteLayout.LayoutFlags="All" />
+    </AbsoluteLayout>
 </ViewCell>

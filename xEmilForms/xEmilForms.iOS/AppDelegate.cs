@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 
 using Foundation;
+using Prism.Events;
 using UIKit;
 
 namespace xEmilForms.iOS
@@ -22,10 +23,21 @@ namespace xEmilForms.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
+            this.SetIoC();
+
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);
+        }
+
+        private void SetIoC()
+        {
+            var resolverContainer = new global::XLabs.Ioc.SimpleContainer();
+
+            resolverContainer.Register<IEventAggregator>(t => new EventAggregator());
+
+            XLabs.Ioc.Resolver.SetResolver(resolverContainer.GetResolver());
         }
     }
 }

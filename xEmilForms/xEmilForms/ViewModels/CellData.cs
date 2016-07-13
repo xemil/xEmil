@@ -1,6 +1,9 @@
 ﻿using Prism.Commands;
+using Prism.Events;
 using Prism.Mvvm;
 using xEmilForms.Helpers;
+using Xamarin.Forms;
+using XLabs.Ioc;
 
 namespace xEmilForms.ViewModels
 {
@@ -8,6 +11,11 @@ namespace xEmilForms.ViewModels
     {
         private bool _hasHeartedPost = false;
         private string _likedButtonImageUrl = UrlHelper._blackHeart;
+
+        public CellData()
+        {
+        }
+
         public int TypeId { get; set; }
 
         public string LikedButtonImageUrl
@@ -31,12 +39,16 @@ namespace xEmilForms.ViewModels
         }
     }
 
+
     public class ImageCellData : CellData
     {
-        public ImageCellData()
+        public ImageCellData(string id)
         {
+            PostId = id;
             TypeId = 0;
         }
+
+        public string PostId { get; set; }
 
         public string ImageUrl { get; set; }
 
@@ -48,6 +60,7 @@ namespace xEmilForms.ViewModels
                 {
                     HasHeartedPost = !HasHeartedPost;
                     LikedButtonImageUrl = HasHeartedPost ? UrlHelper._redHeart : UrlHelper._blackHeart;
+                    MessagingCenter.Send<ImageCellData>(this, "HeartAnimation");
                 });
             }
         }

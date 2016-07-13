@@ -22,10 +22,5 @@
           SeparatorVisibility="None"
           AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All">
     </ListView>
-
-    <views:HeartView
-      AbsoluteLayout.LayoutBounds="0.5,0.5,0.5,0.5" AbsoluteLayout.LayoutFlags="All">
-      
-    </views:HeartView>
   </AbsoluteLayout>
 </ContentPage>
