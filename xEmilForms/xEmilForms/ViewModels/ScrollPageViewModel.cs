@@ -7,7 +7,7 @@ using XLabs.Ioc;
 
 namespace xEmilForms.ViewModels
 {
-    public class ScrollPageViewModel : BindableBase, INavigationAware
+    public class ScrollPageViewModel : BindableBase
     {
         private List<CellData> _cellDataList;
 
@@ -15,17 +15,6 @@ namespace xEmilForms.ViewModels
         {
             get { return _cellDataList ?? (_cellDataList = CreateCellData()); }
             set { SetProperty(ref _cellDataList, value); }
-        }
-
-
-        public void OnNavigatedFrom(NavigationParameters parameters)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void OnNavigatedTo(NavigationParameters parameters)
-        {
-            throw new NotImplementedException();
         }
 
         private List<CellData> CreateCellData()
