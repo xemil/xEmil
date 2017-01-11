@@ -19,7 +19,7 @@
           HasUnevenRows="True"
           ItemSelected="MyListView_OnItemSelected"
           ItemTapped="MyListView_OnItemTapped"
-          SeparatorVisibility="None"
+          SeparatorVisibility="None" FooterTemplate="HeartView"
           AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All">
     </ListView>
   </AbsoluteLayout>

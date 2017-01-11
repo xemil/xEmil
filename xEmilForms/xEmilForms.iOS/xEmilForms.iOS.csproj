@@ -134,14 +134,6 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.iOS" />
-    <Reference Include="XLabs.Ioc, Version=2.0.5782.12218, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\XLabs.IoC.2.0.5782\lib\portable-net45+netcore45+wp8+MonoAndroid1+MonoTouch1\XLabs.Ioc.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="XLabs.Ioc.TinyIOC.iOS, Version=2.0.5782.12254, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\XLabs.IoC.TinyIoC.2.0.5782\lib\Xamarin.iOS10\XLabs.Ioc.TinyIOC.iOS.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="Xamarin.Forms.Core">
       <HintPath>..\..\packages\Xamarin.Forms.2.3.4.171-pre1\lib\Xamarin.iOS10\Xamarin.Forms.Core.dll</HintPath>
     </Reference>
@@ -162,6 +154,12 @@
     </Reference>
     <Reference Include="Prism.Unity.Forms">
       <HintPath>..\..\packages\Prism.Unity.Forms.6.3.0-pre1\lib\Xamarin.iOS1.0\Prism.Unity.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="XLabs.IOC">
+      <HintPath>..\..\packages\XLabs.IoC.2.3.0-pre05\lib\netstandard1.0\XLabs.IOC.dll</HintPath>
+    </Reference>
+    <Reference Include="XLabs.IOC.TinyIOC.iOS">
+      <HintPath>..\..\packages\XLabs.IoC.TinyIOC.2.3.0-pre05\lib\xamarinios\XLabs.IOC.TinyIOC.iOS.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
